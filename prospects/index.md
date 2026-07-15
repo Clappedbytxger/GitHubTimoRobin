@@ -12,9 +12,9 @@ Konfidenz: **A** = eigene Website bei Recherche nicht gefunden (nur FB/Verzeichn
 | # | Firma | Ort / Land | Branche | Konfidenz | Sprache | Status | Live-URL | Mail |
 |---|-------|-----------|---------|-----------|---------|--------|----------|------|
 | 01 | Olaria Patalim | São Pedro do Corval, PT | Töpferei (Terracotta) | A | PT (+EN) | **bereit** | `sites/olaria-patalim/` (Pages-URL nach Aktivierung) | `emails/olaria-patalim.md` |
-| 02 | Olaria Ramalho (Jorge Ramalho) | Bisalhães / Vila Real, PT | Schwarzkeramik (UNESCO) | A | PT (+EN) | offen | – | – |
-| 03 | Artesanato Zezinha | Redondo, PT | Bemalte Möbel/Keramik | A | PT (+EN) | offen | – | – |
-| 04 | Taverna Rodamanthis | Mochos, Kreta, GR | Familien-Taverne | A | GR (+EN) | offen | – | – |
+| 02 | Olaria Ramalho (Jorge Ramalho) | Bisalhães / Vila Real, PT | Schwarzkeramik (UNESCO) | A | PT (+EN) | **bereit** | `sites/olaria-ramalho/` | `emails/olaria-ramalho.md` |
+| 03 | Artesanato Zezinha | Redondo, PT | Bemalte Möbel/Keramik | A | PT (+EN) | **bereit** | `sites/artesanato-zezinha/` | `emails/artesanato-zezinha.md` |
+| 04 | Taverna Rodamanthis | Mochos, Kreta, GR | Familien-Taverne | A | GR (+EN) | **bereit** | `sites/taverna-rodamanthis/` | `emails/taverna-rodamanthis.md` |
 | 05 | Art D'Argile | Fez (Aïn Nokbi), MA | Töpferei/Zellige | A | FR/AR (+EN) | offen | – | – |
 | 06 | Barro-Negro-Werkstatt (Familie) | San Bartolo Coyotepec, Oaxaca, MX | Schwarzkeramik | A | ES (+EN) | offen | – | – |
 | 07 | Balbina Navarro (Textil) | Santo Tomás Jalieza, Oaxaca, MX | Rückengurt-Weberei | A | ES (+EN) | offen | – | – |
