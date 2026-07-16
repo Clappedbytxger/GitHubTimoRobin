@@ -69,7 +69,7 @@ Später optional pro Kunde eine eigene Domain für mehr „Wow" — im ersten Du
 ## Status
 
 - [x] 20 Firmenprofile recherchiert (Session 1)
-- [~] Websites gebaut: 8 von 20 fertig (01–08)
+- [x] Websites gebaut: **20 von 20 fertig** (01–20)
+- [x] E-Mail-Entwürfe für alle 20 erstellt
 - [ ] GitHub Pages aktiviert — Workflow steht, wartet auf einmalige Einstellung (siehe Hosting)
-- [x] E-Mail-Entwürfe für 01–08 erstellt
 - [ ] E-Mail-Entwürfe erstellt

@@ -23,7 +23,7 @@ Konfidenz: **A** = eigene Website bei Recherche nicht gefunden (nur FB/Verzeichn
 | 06 | Barro-Negro-Werkstatt (Familie) | San Bartolo Coyotepec, Oaxaca, MX | Schwarzkeramik | A | ES (+EN) | **bereit** | `sites/barro-negro-coyotepec/` | `emails/barro-negro-coyotepec.md` |
 | 07 | Balbina Navarro (Textil) | Santo Tomás Jalieza, Oaxaca, MX | Rückengurt-Weberei | A | ES (+EN) | **bereit** | `sites/balbina-navarro/` | `emails/balbina-navarro.md` |
 | 08 | Tiêng Vong Pho Lantern Workshop | Hoi An, VN | Laternen-Handwerk | A | VI (+EN) | **bereit** | `sites/tieng-vong-pho/` | `emails/tieng-vong-pho.md` |
-| 09 | Ha Linh Lantern Workshop | Hoi An, VN | Laternen-Handwerk | A | VI (+EN) | offen | – | – |
+| 09 | Ha Linh Lantern Workshop | Hoi An, VN | Laternen-Handwerk | A | VI (+EN) | **bereit** | `sites/ha-linh-lanterns/` | `emails/ha-linh-lanterns.md` |
 | 10 | Deepak Chhipa (Block Print House) | Bagru, Rajasthan, IN | Hand-Blockdruck Textil | A | EN (+HI) | **bereit** | `sites/deepak-chhipa-bagru/` | `emails/deepak-chhipa-bagru.md` |
 | 11 | Wood Carver Pande Family | Mas Village, Bali, ID | Holzschnitzerei | A | ID (+EN) | **bereit** | `sites/pande-woodcarving/` | `emails/pande-woodcarving.md` |
 | 12 | Lema Weaving Association | San Juan La Laguna, GT | Frauen-Weberei/Naturfarben | A | ES (+EN) | **bereit** | `sites/lema-weaving/` | `emails/lema-weaving.md` |
