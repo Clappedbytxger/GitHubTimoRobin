@@ -32,9 +32,9 @@ Konfidenz: **A** = eigene Website bei Recherche nicht gefunden (nur FB/Verzeichn
 | 15 | Familien-Töpferei Pottery Square | Bhaktapur, NP | Töpferei | A | NE (+EN) | **bereit** | `sites/bhaktapur-pottery/` | `emails/bhaktapur-pottery.md` |
 | 16 | Rishtan-Keramikmeister (Familie) | Rishtan, UZ | Blaue Keramik (Ishkor) | B | EN (+UZ) | **bereit** | `sites/rishtan-ceramics/` | `emails/rishtan-ceramics.md` |
 | 17 | Lang Dulay Weaving Center (Dulay-Familie) | Lake Sebu, PH | T'nalak-Weberei | A | EN (+FIL) | **bereit** | `sites/lang-dulay-tnalak/` | `emails/lang-dulay-tnalak.md` |
-| 18 | Filigran-Werkstatt TresPalacios | Mompox, CO | Silber-Filigran-Schmuck | B | ES (+EN) | offen | – | – |
-| 19 | Avanos-Töpferwerkstatt (Familie) | Avanos, Kappadokien, TR | Keramik | B | TR (+EN) | offen | – | – |
-| 20 | Mashiko-Familienbrennofen | Mashiko, Tochigi, JP | Keramik (Mashiko-yaki) | B | JA (+EN) | offen | – | – |
+| 18 | Filigran-Werkstatt TresPalacios | Mompox, CO | Silber-Filigran-Schmuck | B | ES (+EN) | **bereit** | `sites/trespalacios-filigree/` | `emails/trespalacios-filigree.md` |
+| 19 | Avanos-Töpferwerkstatt (Familie) | Avanos, Kappadokien, TR | Keramik | B | TR (+EN) | **bereit** | `sites/avanos-pottery/` | `emails/avanos-pottery.md` |
+| 20 | Mashiko-Familienbrennofen | Mashiko, Tochigi, JP | Keramik (Mashiko-yaki) | B | JA (+EN) | **bereit** | `sites/mashiko-pottery/` | `emails/mashiko-pottery.md` |
 
 **Länder-Streuung:** Portugal ×3, Mexiko ×2, Vietnam ×2, Indonesien ×2, Griechenland,
 Marokko, Indien, Guatemala, Ägypten, Nepal, Usbekistan, Philippinen, Kolumbien, Türkei, Japan.
