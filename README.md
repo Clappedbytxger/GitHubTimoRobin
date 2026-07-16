@@ -39,9 +39,17 @@ emails/                   # (Folge-Sessions) Mail-Entwürfe je Firma
 
 ## Hosting
 
-**GitHub Pages** (kostenlos, vom Handy steuerbar). Alle Seiten liegen unter
-`sites/<slug>/` und sind live unter
-`https://<dein-github-name>.github.io/<repo>/sites/<slug>/`.
+**GitHub Pages** (kostenlos) über den Workflow `.github/workflows/pages.yml`.
+Veröffentlicht wird **nur der `sites/`-Ordner** (die Kunden-Websites) — `prospects/` und `emails/`
+bleiben bewusst **nicht** im Web. Live-URLs:
+`https://clappedbytxger.github.io/GitHubTimoRobin/<ordner>/` (z. B. `.../olaria-patalim/`).
+
+**⚠️ Einmalige Einstellung nötig (nur Repo-Besitzer):** Der Actions-Token darf Pages standardmäßig
+nicht aktivieren (Fehler „Resource not accessible by integration"). Fix (30 Sek.):
+> **Settings → Actions → General → Workflow permissions → „Read and write permissions" → Save.**
+Danach den Workflow „Deploy client sites to GitHub Pages" erneut ausführen (Re-run). Ab dann
+deployt jeder Push automatisch. Alternativ: **Settings → Pages → Source → „GitHub Actions"**.
+
 Später optional pro Kunde eine eigene Domain für mehr „Wow" — im ersten Durchlauf nicht nötig.
 
 ## Wichtige Hinweise (bitte lesen)
@@ -61,6 +69,7 @@ Später optional pro Kunde eine eigene Domain für mehr „Wow" — im ersten Du
 ## Status
 
 - [x] 20 Firmenprofile recherchiert (Session 1)
-- [ ] Websites gebaut (Folge-Sessions)
-- [ ] GitHub Pages aktiviert
+- [~] Websites gebaut: 8 von 20 fertig (01–08)
+- [ ] GitHub Pages aktiviert — Workflow steht, wartet auf einmalige Einstellung (siehe Hosting)
+- [x] E-Mail-Entwürfe für 01–08 erstellt
 - [ ] E-Mail-Entwürfe erstellt
