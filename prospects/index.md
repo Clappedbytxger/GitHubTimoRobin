@@ -30,8 +30,8 @@ Konfidenz: **A** = eigene Website bei Recherche nicht gefunden (nur FB/Verzeichn
 | 13 | Abhati Studio | Yogyakarta, ID | Batik (Naturfarben) | A | ID (+EN) | **bereit** | `sites/abhati-batik/` | `emails/abhati-batik.md` |
 | 14 | Tentmakers of Cairo (Hany Mahmoud) | Kairo (Khayamiya), EG | Khayamiya-Applikation | A | AR (+EN) | **bereit** | `sites/tentmakers-cairo/` | `emails/tentmakers-cairo.md` |
 | 15 | Familien-Töpferei Pottery Square | Bhaktapur, NP | Töpferei | A | NE (+EN) | **bereit** | `sites/bhaktapur-pottery/` | `emails/bhaktapur-pottery.md` |
-| 16 | Rishtan-Keramikmeister (Familie) | Rishtan, UZ | Blaue Keramik (Ishkor) | B | UZ/RU (+EN) | offen | – | – |
-| 17 | Lang Dulay Weaving Center (Dulay-Familie) | Lake Sebu, PH | T'nalak-Weberei | A | EN (+FIL) | offen | – | – |
+| 16 | Rishtan-Keramikmeister (Familie) | Rishtan, UZ | Blaue Keramik (Ishkor) | B | EN (+UZ) | **bereit** | `sites/rishtan-ceramics/` | `emails/rishtan-ceramics.md` |
+| 17 | Lang Dulay Weaving Center (Dulay-Familie) | Lake Sebu, PH | T'nalak-Weberei | A | EN (+FIL) | **bereit** | `sites/lang-dulay-tnalak/` | `emails/lang-dulay-tnalak.md` |
 | 18 | Filigran-Werkstatt TresPalacios | Mompox, CO | Silber-Filigran-Schmuck | B | ES (+EN) | offen | – | – |
 | 19 | Avanos-Töpferwerkstatt (Familie) | Avanos, Kappadokien, TR | Keramik | B | TR (+EN) | offen | – | – |
 | 20 | Mashiko-Familienbrennofen | Mashiko, Tochigi, JP | Keramik (Mashiko-yaki) | B | JA (+EN) | offen | – | – |
