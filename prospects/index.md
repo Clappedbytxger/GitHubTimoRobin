@@ -24,12 +24,12 @@ Konfidenz: **A** = eigene Website bei Recherche nicht gefunden (nur FB/Verzeichn
 | 07 | Balbina Navarro (Textil) | Santo Tomás Jalieza, Oaxaca, MX | Rückengurt-Weberei | A | ES (+EN) | **bereit** | `sites/balbina-navarro/` | `emails/balbina-navarro.md` |
 | 08 | Tiêng Vong Pho Lantern Workshop | Hoi An, VN | Laternen-Handwerk | A | VI (+EN) | **bereit** | `sites/tieng-vong-pho/` | `emails/tieng-vong-pho.md` |
 | 09 | Ha Linh Lantern Workshop | Hoi An, VN | Laternen-Handwerk | A | VI (+EN) | offen | – | – |
-| 10 | Deepak Chhipa (Block Print House) | Bagru, Rajasthan, IN | Hand-Blockdruck Textil | A | EN (+HI) | offen | – | – |
+| 10 | Deepak Chhipa (Block Print House) | Bagru, Rajasthan, IN | Hand-Blockdruck Textil | A | EN (+HI) | **bereit** | `sites/deepak-chhipa-bagru/` | `emails/deepak-chhipa-bagru.md` |
 | 11 | Wood Carver Pande Family | Mas Village, Bali, ID | Holzschnitzerei | A | ID (+EN) | **bereit** | `sites/pande-woodcarving/` | `emails/pande-woodcarving.md` |
 | 12 | Lema Weaving Association | San Juan La Laguna, GT | Frauen-Weberei/Naturfarben | A | ES (+EN) | **bereit** | `sites/lema-weaving/` | `emails/lema-weaving.md` |
 | 13 | Abhati Studio | Yogyakarta, ID | Batik (Naturfarben) | A | ID (+EN) | **bereit** | `sites/abhati-batik/` | `emails/abhati-batik.md` |
 | 14 | Tentmakers of Cairo (Hany Mahmoud) | Kairo (Khayamiya), EG | Khayamiya-Applikation | A | AR (+EN) | **bereit** | `sites/tentmakers-cairo/` | `emails/tentmakers-cairo.md` |
-| 15 | Familien-Töpferei Pottery Square | Bhaktapur, NP | Töpferei | A | NE (+EN) | offen | – | – |
+| 15 | Familien-Töpferei Pottery Square | Bhaktapur, NP | Töpferei | A | NE (+EN) | **bereit** | `sites/bhaktapur-pottery/` | `emails/bhaktapur-pottery.md` |
 | 16 | Rishtan-Keramikmeister (Familie) | Rishtan, UZ | Blaue Keramik (Ishkor) | B | UZ/RU (+EN) | offen | – | – |
 | 17 | Lang Dulay Weaving Center (Dulay-Familie) | Lake Sebu, PH | T'nalak-Weberei | A | EN (+FIL) | offen | – | – |
 | 18 | Filigran-Werkstatt TresPalacios | Mompox, CO | Silber-Filigran-Schmuck | B | ES (+EN) | offen | – | – |
