@@ -6,6 +6,10 @@ Recherchestand: Juli 2026. **Vor Bau/Versand jeweils Website-Status & Kontakt ve
 Status-Legende: `offen` = noch nichts gebaut · `bereit` = Website live + Mail-Entwurf fertig ·
 `übersprungen` = hat inzwischen doch gute Website.
 
+**Live-URLs (GitHub Pages):** `https://clappedbytxger.github.io/GitHubTimoRobin/<ordner>/` — der `<ordner>` ist
+der Name aus der Spalte „Live-URL" ohne das `sites/`-Präfix (z. B. `.../GitHubTimoRobin/olaria-patalim/`).
+Veröffentlicht wird nur der `sites/`-Ordner; `prospects/` und `emails/` bleiben privat (nicht als Website).
+
 Konfidenz: **A** = eigene Website bei Recherche nicht gefunden (nur FB/Verzeichnis/Telefon) ·
 **B** = Betriebstyp spricht stark dafür, konkreten Betrieb in Schritt 1 noch bestätigen.
 
@@ -15,10 +19,10 @@ Konfidenz: **A** = eigene Website bei Recherche nicht gefunden (nur FB/Verzeichn
 | 02 | Olaria Ramalho (Jorge Ramalho) | Bisalhães / Vila Real, PT | Schwarzkeramik (UNESCO) | A | PT (+EN) | **bereit** | `sites/olaria-ramalho/` | `emails/olaria-ramalho.md` |
 | 03 | Artesanato Zezinha | Redondo, PT | Bemalte Möbel/Keramik | A | PT (+EN) | **bereit** | `sites/artesanato-zezinha/` | `emails/artesanato-zezinha.md` |
 | 04 | Taverna Rodamanthis | Mochos, Kreta, GR | Familien-Taverne | A | GR (+EN) | **bereit** | `sites/taverna-rodamanthis/` | `emails/taverna-rodamanthis.md` |
-| 05 | Art D'Argile | Fez (Aïn Nokbi), MA | Töpferei/Zellige | A | FR/AR (+EN) | offen | – | – |
-| 06 | Barro-Negro-Werkstatt (Familie) | San Bartolo Coyotepec, Oaxaca, MX | Schwarzkeramik | A | ES (+EN) | offen | – | – |
-| 07 | Balbina Navarro (Textil) | Santo Tomás Jalieza, Oaxaca, MX | Rückengurt-Weberei | A | ES (+EN) | offen | – | – |
-| 08 | Tiêng Vong Pho Lantern Workshop | Hoi An, VN | Laternen-Handwerk | A | VI (+EN) | offen | – | – |
+| 05 | Art D'Argile | Fez (Aïn Nokbi), MA | Töpferei/Zellige | A | FR (+EN) | **bereit** | `sites/art-dargile/` | `emails/art-dargile.md` |
+| 06 | Barro-Negro-Werkstatt (Familie) | San Bartolo Coyotepec, Oaxaca, MX | Schwarzkeramik | A | ES (+EN) | **bereit** | `sites/barro-negro-coyotepec/` | `emails/barro-negro-coyotepec.md` |
+| 07 | Balbina Navarro (Textil) | Santo Tomás Jalieza, Oaxaca, MX | Rückengurt-Weberei | A | ES (+EN) | **bereit** | `sites/balbina-navarro/` | `emails/balbina-navarro.md` |
+| 08 | Tiêng Vong Pho Lantern Workshop | Hoi An, VN | Laternen-Handwerk | A | VI (+EN) | **bereit** | `sites/tieng-vong-pho/` | `emails/tieng-vong-pho.md` |
 | 09 | Ha Linh Lantern Workshop | Hoi An, VN | Laternen-Handwerk | A | VI (+EN) | offen | – | – |
 | 10 | Deepak Chhipa (Block Print House) | Bagru, Rajasthan, IN | Hand-Blockdruck Textil | A | EN (+HI) | offen | – | – |
 | 11 | Wood Carver Pande Family | Mas Village, Bali, ID | Holzschnitzerei | A | ID (+EN) | offen | – | – |

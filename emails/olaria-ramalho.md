@@ -2,7 +2,7 @@
 
 **Sprache:** Portugiesisch (+EN-Variante)
 **Kanal:** ✅ E-Mail vorhanden: **olariajorgeramalho@gmail.com** `(zu prüfen)` · Tel. +351 936 018 613 `(zu prüfen)` · Facebook `olarianegradebisalhaes`
-**Live-Link (nach Pages-Aktivierung):** `https://clappedbytxger.github.io/GitHubTimoRobin/sites/olaria-ramalho/`
+**Live-Link:** `https://clappedbytxger.github.io/GitHubTimoRobin/olaria-ramalho/`
 **Absender:** eigene Adresse, echter Name (`[…]` ausfüllen).
 
 ---
@@ -20,7 +20,7 @@ Fiquei fascinado com a olaria negra de Bisalhães — um saber reconhecido pela 
 
 Por isso fiz-lhe uma **proposta de website**, já pronta a ver — pensada para mostrar as peças e a história do ofício a colecionadores, museus e visitantes:
 
-👉 **[LINK]**
+👉 **https://clappedbytxger.github.io/GitHubTimoRobin/olaria-ramalho/**
 
 É apenas um conceito: textos, cores e fotografias podem mudar à vontade. Se gostar, responda a esta mensagem e avançamos; se não fizer sentido, ignore sem problema — sem qualquer compromisso.
 
@@ -44,7 +44,7 @@ I was fascinated by the black pottery of Bisalhães — a craft recognised by UN
 
 So I built you a **website proposal**, ready to view — made to show your pieces and the story of the craft to collectors, museums and visitors:
 
-👉 **[LINK]**
+👉 **https://clappedbytxger.github.io/GitHubTimoRobin/olaria-ramalho/**
 
 It's just a concept: text, colours and photos can all change. If you like it, just reply and we'll take it further; if not, feel free to ignore this — no obligation at all.
 

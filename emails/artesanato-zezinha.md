@@ -4,7 +4,7 @@
 **Kanal:** ⚠️ **Keine E-Mail/Telefon öffentlich gefunden** (nur Ladenadresse Av. de Gien 5, Redondo). Optionen vor Versand:
 - Vor Ort / per Câmara de Redondo Kontakt erfragen, **oder**
 - Facebook/Instagram der Oficina Zezinha suchen (DM).
-**Live-Link (nach Pages-Aktivierung):** `https://clappedbytxger.github.io/GitHubTimoRobin/sites/artesanato-zezinha/`
+**Live-Link:** `https://clappedbytxger.github.io/GitHubTimoRobin/artesanato-zezinha/`
 **Absender:** eigene Adresse, echter Name (`[…]`).
 
 ---
@@ -22,7 +22,7 @@ Descobri a vossa oficina em Redondo e apaixonei-me pelos móveis pintados à mã
 
 Por isso fiz-vos uma **proposta de website**, já pronta a ver, feita para mostrar as cores e as peças a quem adora artesanato e decoração:
 
-👉 **[LINK]**
+👉 **https://clappedbytxger.github.io/GitHubTimoRobin/artesanato-zezinha/**
 
 É só um conceito — textos, cores e fotografias mudam à vontade. Se gostarem, respondam e avançamos; se não fizer sentido, ignorem sem compromisso.
 
@@ -46,7 +46,7 @@ I came across your workshop in Redondo and fell in love with the hand-painted fu
 
 So I built you a **website proposal**, ready to view, made to show your colours and pieces to people who love craft and décor:
 
-👉 **[LINK]**
+👉 **https://clappedbytxger.github.io/GitHubTimoRobin/artesanato-zezinha/**
 
 It's just a concept — text, colours and photos can all change. If you like it, reply and we'll take it further; if not, feel free to ignore this, no obligation.
 

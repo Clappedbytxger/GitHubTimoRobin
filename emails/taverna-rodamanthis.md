@@ -4,7 +4,7 @@
 **Kanal:** Telefon **+30 697 431 5062** `(zu prüfen)`. ⚠️ **Keine E-Mail gefunden.** Optionen:
 - Facebook-Seite „Taverna Rodamanthis / Grill House Rodamanthis" (DM), **oder**
 - Anruf mit Hinweis auf den Link, **oder** E-Mail über TripAdvisor-Nachricht.
-**Live-Link (nach Pages-Aktivierung):** `https://clappedbytxger.github.io/GitHubTimoRobin/sites/taverna-rodamanthis/`
+**Live-Link:** `https://clappedbytxger.github.io/GitHubTimoRobin/taverna-rodamanthis/`
 **Absender:** eigene Adresse, echter Name (`[…]`).
 
 ---
@@ -22,7 +22,7 @@
 
 Γι' αυτό σας **έφτιαξα μια πρόταση ιστότοπου**, έτοιμη να τη δείτε:
 
-👉 **[LINK]**
+👉 **https://clappedbytxger.github.io/GitHubTimoRobin/taverna-rodamanthis/**
 
 Είναι απλώς μια ιδέα — κείμενα, χρώματα και φωτογραφίες αλλάζουν εύκολα. Αν σας αρέσει, απαντήστε και συνεχίζουμε· αν δεν σας ενδιαφέρει, αγνοήστε το ελεύθερα, χωρίς καμία υποχρέωση.
 
@@ -46,7 +46,7 @@ I heard about your taverna in Mochos — your hospitality and the Cretan night w
 
 So I built you a **website proposal**, ready to view:
 
-👉 **[LINK]**
+👉 **https://clappedbytxger.github.io/GitHubTimoRobin/taverna-rodamanthis/**
 
 It's just a concept — text, colours and photos can all change. If you like it, reply and we'll continue; if not, feel free to ignore it, no obligation.
 

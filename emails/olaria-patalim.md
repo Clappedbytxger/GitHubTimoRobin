@@ -5,7 +5,7 @@
 - Facebook-/Instagram-Direktnachricht (Profil der Olaria/Familie Patalim suchen), **oder**
 - Telefon +351 967 573 883 `(zu prüfen)` — anrufen und Link nennen, **oder**
 - E-Mail über Câmara de Reguengos / vor Ort erfragen.
-**Live-Link (nach Pages-Aktivierung):** `https://clappedbytxger.github.io/GitHubTimoRobin/sites/olaria-patalim/`
+**Live-Link:** `https://clappedbytxger.github.io/GitHubTimoRobin/olaria-patalim/`
 **Absender:** von deiner eigenen Adresse/deinem Profil senden, mit echtem Namen (siehe `[…]`).
 
 ---
@@ -23,7 +23,7 @@ Fiquei a saber que a Olaria Patalim é a olaria mais antiga de São Pedro do Cor
 
 Por isso, em vez de vos pedir nada, **fiz-vos uma proposta de website** — já pronta a ver:
 
-👉 **[LINK]**
+👉 **https://clappedbytxger.github.io/GitHubTimoRobin/olaria-patalim/**
 
 É só um conceito (dá para mudar tudo — textos, cores, fotografias). Se gostarem, respondam a esta mensagem e avançamos; se não fizer sentido para vocês, ignorem à vontade — sem qualquer compromisso.
 
@@ -48,7 +48,7 @@ I learned that Olaria Patalim is the oldest pottery in São Pedro do Corval — 
 
 So instead of asking you for anything, **I already built you a website proposal** — ready to look at:
 
-👉 **[LINK]**
+👉 **https://clappedbytxger.github.io/GitHubTimoRobin/olaria-patalim/**
 
 It's just a concept (everything can change — text, colours, photos). If you like it, just reply and we'll take it from there; if it's not for you, feel free to ignore this — no obligation at all.
 
