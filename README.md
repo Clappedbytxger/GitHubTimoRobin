@@ -71,5 +71,8 @@ Später optional pro Kunde eine eigene Domain für mehr „Wow" — im ersten Du
 - [x] 20 Firmenprofile recherchiert (Session 1)
 - [x] Websites gebaut: **20 von 20 fertig** (01–20)
 - [x] E-Mail-Entwürfe für alle 20 erstellt
-- [ ] GitHub Pages aktiviert — Workflow steht, wartet auf einmalige Einstellung (siehe Hosting)
+- [x] **GitHub Pages LIVE** — deployt automatisch von `main` (Merge des Arbeitsbranches → PR #1)
+
+**Live-Basis-URL:** `https://clappedbytxger.github.io/GitHubTimoRobin/<ordner>/`
+Künftige Updates: Änderungen nach `main` mergen → Pages deployt automatisch neu (nur `sites/`).
 - [ ] E-Mail-Entwürfe erstellt
