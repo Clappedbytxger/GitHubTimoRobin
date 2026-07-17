@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="pt" data-lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Artesanato Zezinha · Móveis pintados à mão · Redondo</title>
+<meta name="description" content="Móveis e peças de madeira pintados à mão com os motivos florais do Alentejo. Oficina Zezinha, Redondo.">
+<style>
+:root{
+  --verde:#2f7d4f; --verde-esc:#1f5c39; --azul:#1f5fa8; --vermelho:#d8432f;
+  --amarelo:#e2a12a; --rosa:#c8497b; --madeira:#a9713e;
+  --bg:#f6efe1; --surface:#fbf6ec; --surface-2:#efe6d3; --line:#e2d6bf;
+  --text:#2c2418; --muted:#6a5c46; --dim:#8c7c60;
+  --accent:var(--verde); --accent-ink:#fff;
+  --serif:"Palatino Linotype","Book Antiqua",Palatino,"Iowan Old Style","Hoefler Text",Georgia,serif;
+  --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --wrap:74rem; --pad:clamp(1.15rem,5vw,3rem); --r:14px;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#1c1710; --surface:#251d14; --surface-2:#2e2417; --line:#3c2f1e;
+    --text:#f0e7d6; --muted:#bcac91; --dim:#8c7c60;
+    --verde:#4fae74; --azul:#5b91d4; --vermelho:#e9705c; --amarelo:#edc059; --rosa:#dd7ba6;
+    --accent:var(--verde);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1c1710; --surface:#251d14; --surface-2:#2e2417; --line:#3c2f1e;
+  --text:#f0e7d6; --muted:#bcac91; --dim:#8c7c60;
+  --verde:#4fae74; --azul:#5b91d4; --vermelho:#e9705c; --amarelo:#edc059; --rosa:#dd7ba6; --accent:var(--verde);
+}
+:root[data-theme="light"]{
+  --bg:#f6efe1; --surface:#fbf6ec; --surface-2:#efe6d3; --line:#e2d6bf;
+  --text:#2c2418; --muted:#6a5c46; --dim:#8c7c60;
+  --verde:#2f7d4f; --azul:#1f5fa8; --vermelho:#d8432f; --amarelo:#e2a12a; --rosa:#c8497b; --accent:var(--verde);
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);
+  font-size:clamp(1rem,.96rem + .2vw,1.08rem);line-height:1.65;-webkit-font-smoothing:antialiased}
+[data-lang="pt"] [lang="en"]{display:none}
+[data-lang="en"] [lang="pt"]{display:none}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.06;text-wrap:balance;letter-spacing:-.01em;margin:0}
+p{margin:0}a{color:inherit}
+.wrap{width:100%;max-width:var(--wrap);margin-inline:auto;padding-inline:var(--pad)}
+.eyebrow{font:700 .74rem/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--accent)}
+.lede{font-size:clamp(1.1rem,1rem + .6vw,1.4rem);color:var(--muted);max-width:48ch;line-height:1.55}
+
+.ribbon{background:var(--surface-2);color:var(--muted);font-size:.78rem;text-align:center;
+  padding:.5rem var(--pad);border-bottom:1px solid var(--line)}
+.ribbon strong{color:var(--accent)}
+
+.top{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 90%,transparent);
+  backdrop-filter:blur(9px);border-bottom:1px solid var(--line)}
+.top .bar{display:flex;align-items:center;gap:1rem;min-height:60px;padding-block:.6rem}
+.brand{display:flex;align-items:center;gap:.6rem;margin-right:auto}
+.brand .fl{width:26px;height:26px;flex:none}
+.brand b{font-family:var(--serif);font-size:1.12rem;font-weight:600;line-height:1}
+.brand span{display:block;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.nav{display:flex;gap:1.3rem;margin-right:1rem}
+.nav a{font-size:.82rem;color:var(--muted);text-decoration:none;padding:.2rem 0;border-bottom:2px solid transparent;transition:.2s}
+.nav a:hover{color:var(--text)}.nav a.active{color:var(--accent);border-color:var(--accent)}
+@media (max-width:860px){.nav{display:none}}
+.controls{display:flex;align-items:center;gap:.4rem}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.seg button{font:600 .78rem var(--sans);background:transparent;color:var(--muted);border:0;padding:.32rem .68rem;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--accent);color:#fff}
+.icon-btn{font-size:.95rem;background:transparent;border:1px solid var(--line);border-radius:999px;width:2.1rem;height:2.1rem;cursor:pointer;color:var(--text);display:grid;place-items:center}
+a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2.5px solid var(--accent);outline-offset:3px}
+
+.btn{display:inline-flex;align-items:center;gap:.5rem;font:600 1rem var(--sans);padding:.8rem 1.35rem;border-radius:999px;text-decoration:none;cursor:pointer;border:1px solid transparent;transition:transform .15s}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-ghost{background:transparent;border-color:var(--line);color:var(--text)}
+.btn:hover{transform:translateY(-2px)}
+@media (prefers-reduced-motion:reduce){.btn:hover{transform:none}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:
+  linear-gradient(180deg,var(--surface),var(--bg))}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:2.5rem;align-items:center;padding-block:clamp(2.6rem,7vw,5.5rem)}
+.hero h1{font-size:clamp(2.4rem,1.6rem + 4.2vw,4.4rem);margin:.4rem 0 0}
+.hero h1 .c1{color:var(--vermelho)}.hero h1 .c2{color:var(--azul)}.hero h1 .c3{color:var(--amarelo)}
+.hero .sub{color:var(--muted);font-size:clamp(1.05rem,1rem + .5vw,1.28rem);max-width:42ch;margin-top:1.2rem}
+.hero .cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
+.chest{width:min(34vw,340px);margin-inline:auto;filter:drop-shadow(0 22px 34px rgba(80,50,20,.28))}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border-block:1px solid var(--line)}
+.stat{background:var(--bg);padding:1.6rem var(--pad);text-align:center}
+.stat b{display:block;font-family:var(--serif);font-size:clamp(2rem,1.4rem + 2.4vw,3rem);color:var(--accent);line-height:1;font-variant-numeric:tabular-nums}
+.stat span{display:block;margin-top:.5rem;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+
+section{padding-block:clamp(3rem,7vw,5.5rem)}
+.section-head{max-width:54ch;margin-bottom:2.4rem}
+.section-head h2{font-size:clamp(1.8rem,1.3rem + 2vw,2.8rem);margin-top:.5rem}
+.rule{width:56px;height:3px;background:var(--accent);border-radius:3px;margin-bottom:1.3rem}
+.two-col{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:center}
+.prose p+p{margin-top:1rem}
+
+.woodpanel{aspect-ratio:4/5;border-radius:var(--r);position:relative;overflow:hidden;border:1px solid var(--line);
+  background:repeating-linear-gradient(90deg,#b3803f,#b3803f 22px,#a9763a 22px,#a9763a 44px)}
+.woodpanel .frame{position:absolute;inset:14px;border:3px solid #f6efe1;border-radius:8px}
+.woodpanel .ph{position:absolute;left:1rem;bottom:1rem;font:.68rem/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:#fff;background:rgba(0,0,0,.32);padding:.35rem .6rem;border-radius:6px}
+
+/* colours section */
+.cores{background:var(--surface)}
+.swatches{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
+.sw{border-radius:var(--r);border:1px solid var(--line);overflow:hidden;background:var(--bg)}
+.sw .chip{height:80px}
+.sw p{padding:.7rem .8rem;font-size:.82rem;color:var(--muted)}
+.sw b{display:block;color:var(--text);font-family:var(--serif);font-size:1rem}
+@media (max-width:720px){.swatches{grid-template-columns:repeat(2,1fr)}}
+
+/* gallery + lightbox */
+.grid-g{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+.tile{position:relative;aspect-ratio:1;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);cursor:zoom-in;background:var(--surface-2)}
+.tile .fill{position:absolute;inset:0}
+.tile figcaption{position:absolute;left:0;right:0;bottom:0;padding:.7rem .8rem;font-size:.82rem;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.55))}
+.tile .z{position:absolute;top:.55rem;right:.6rem;width:1.8rem;height:1.8rem;border-radius:50%;background:rgba(0,0,0,.35);color:#fff;display:grid;place-items:center;font-size:.9rem;border:1px solid rgba(255,255,255,.3)}
+.note{margin-top:1.2rem;font-size:.85rem;color:var(--muted);display:flex;gap:.5rem}.note b{color:var(--accent)}
+.lightbox{position:fixed;inset:0;z-index:60;background:rgba(30,20,8,.86);display:none;place-items:center;padding:5vw;backdrop-filter:blur(3px)}
+.lightbox.open{display:grid}
+.lightbox figure{margin:0;max-width:560px;width:100%}
+.lightbox .fill{aspect-ratio:1;border-radius:var(--r);border:1px solid #5a4326}
+.lightbox figcaption{color:#f6efe1;text-align:center;margin-top:1rem;font-size:1.05rem}
+.lightbox .close{position:absolute;top:1.2rem;right:1.3rem;background:transparent;border:1px solid #7a6038;color:#f6efe1;width:2.6rem;height:2.6rem;border-radius:50%;font-size:1.2rem;cursor:pointer}
+
+.contact{text-align:center}
+.contact h2{font-size:clamp(1.9rem,1.4rem + 2.4vw,3rem);max-width:22ch;margin-inline:auto}
+.contact .lede{margin:1rem auto 2rem}.contact .cta{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;max-width:46rem;margin:2rem auto 0;text-align:left}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.5rem}
+.card h3{font-size:1.05rem}.card .big{font-family:var(--serif);font-size:1.35rem;margin:.5rem 0;color:var(--text)}
+.card p,.card a{color:var(--muted);text-decoration:none}.card a:hover{color:var(--accent)}
+.tocheck{display:inline-block;font:.66rem/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--amarelo);border:1px solid color-mix(in srgb,var(--amarelo) 45%,var(--line));padding:.1rem .4rem;border-radius:5px;margin-left:.35rem}
+
+footer{background:var(--verde-esc);color:#eef3ec;padding-block:2.6rem}
+:root[data-theme="dark"] footer{background:#14100a}
+footer .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between;align-items:center}
+footer b{color:#fff}footer .sub{color:#cfe0cf;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase}
+footer small{color:#cfe0cf;font-size:.78rem;max-width:46ch;display:block}
+
+.divider{display:flex;justify-content:center;padding-top:.5rem}
+.divider svg{width:120px;opacity:.9}
+
+.reveal{transition:opacity .7s ease,transform .7s ease}
+html.js .reveal{opacity:0;transform:translateY(18px)}
+html.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html.js .reveal{opacity:1;transform:none;transition:none}}
+
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:1.6rem}.chest{order:-1;width:min(52vw,240px)}.two-col{grid-template-columns:1fr}}
+@media (max-width:520px){.stats{grid-template-columns:1fr}.grid-g{grid-template-columns:1fr 1fr}.cards{grid-template-columns:1fr}.brand span{display:none}}
+</style>
+</head>
+<body>
+
+<div class="ribbon"><span class="i18n">
+  <span lang="pt"><strong>Conceito de website</strong> criado como proposta para o Artesanato Zezinha — ainda não é o site oficial.</span>
+  <span lang="en"><strong>Website concept</strong> created as a proposal for Artesanato Zezinha — not yet the official site.</span>
+</span></div>
+
+<header class="top">
+  <div class="wrap bar">
+    <div class="brand">
+      <svg class="fl" viewBox="0 0 40 40" aria-hidden="true"><g><circle cx="20" cy="20" r="5" fill="var(--amarelo)"/><g fill="var(--vermelho)"><ellipse cx="20" cy="8" rx="4.5" ry="7"/><ellipse cx="20" cy="32" rx="4.5" ry="7"/><ellipse cx="8" cy="20" rx="7" ry="4.5"/><ellipse cx="32" cy="20" rx="7" ry="4.5"/></g><g fill="var(--azul)"><ellipse cx="11" cy="11" rx="4" ry="6" transform="rotate(45 11 11)"/><ellipse cx="29" cy="29" rx="4" ry="6" transform="rotate(45 29 29)"/><ellipse cx="29" cy="11" rx="4" ry="6" transform="rotate(-45 29 11)"/><ellipse cx="11" cy="29" rx="4" ry="6" transform="rotate(-45 11 29)"/></g></g></svg>
+      <div><b>Artesanato Zezinha</b><span>Redondo · Alentejo</span></div>
+    </div>
+    <nav class="nav" aria-label="Secções">
+      <a href="#historia" class="i18n"><span lang="pt">História</span><span lang="en">Story</span></a>
+      <a href="#cores" class="i18n"><span lang="pt">Cores &amp; motivos</span><span lang="en">Colours</span></a>
+      <a href="#galeria" class="i18n"><span lang="pt">Galeria</span><span lang="en">Gallery</span></a>
+      <a href="#contacto" class="i18n"><span lang="pt">Visitar</span><span lang="en">Visit</span></a>
+    </nav>
+    <div class="controls">
+      <div class="seg" role="group" aria-label="Idioma"><button id="pt" aria-pressed="true" onclick="setLang('pt')">PT</button><button id="en" aria-pressed="false" onclick="setLang('en')">EN</button></div>
+      <button class="icon-btn" aria-label="Tema claro/escuro" onclick="toggleTheme()">◐</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow i18n"><span lang="pt">Móveis pintados à mão · Redondo</span><span lang="en">Hand-painted furniture · Redondo</span></p>
+      <h1 class="i18n">
+        <span lang="pt">A <span class="c1">alegria</span> do Alentejo, <span class="c2">pintada</span> <span class="c3">à mão</span>.</span>
+        <span lang="en">The <span class="c1">joy</span> of the Alentejo, <span class="c2">painted</span> <span class="c3">by hand</span>.</span>
+      </h1>
+      <p class="sub i18n">
+        <span lang="pt">Na oficina Zezinha, em Redondo, a madeira ganha vida com flores e folhas pintadas à mão — cada peça uma pequena obra de arte popular.</span>
+        <span lang="en">At the Zezinha workshop in Redondo, wood comes alive with hand-painted flowers and leaves — each piece a small work of folk art.</span>
+      </p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#galeria"><span class="i18n"><span lang="pt">Ver as peças</span><span lang="en">See the pieces</span></span></a>
+        <a class="btn btn-ghost" href="#contacto"><span class="i18n"><span lang="pt">Visitar a oficina</span><span lang="en">Visit the workshop</span></span></a>
+      </div>
+    </div>
+    <div>
+      <svg class="chest" viewBox="0 0 260 260" role="img" aria-label="Móvel pintado à mão / Hand-painted chest">
+        <rect x="30" y="60" width="200" height="150" rx="8" fill="#b3803f" stroke="#7c5325" stroke-width="2"/>
+        <rect x="30" y="60" width="200" height="150" rx="8" fill="none" stroke="#f6efe1" stroke-width="4"/>
+        <line x1="130" y1="70" x2="130" y2="200" stroke="#f6efe1" stroke-width="3"/>
+        <line x1="40" y1="135" x2="220" y2="135" stroke="#f6efe1" stroke-width="3"/>
+        <circle cx="112" cy="135" r="4" fill="#2c2418"/><circle cx="148" cy="135" r="4" fill="#2c2418"/>
+        <g transform="translate(80 100)"><circle r="7" fill="var(--amarelo)"/><g fill="var(--vermelho)"><ellipse cx="0" cy="-14" rx="5" ry="9"/><ellipse cx="0" cy="14" rx="5" ry="9"/><ellipse cx="-14" cy="0" rx="9" ry="5"/><ellipse cx="14" cy="0" rx="9" ry="5"/></g></g>
+        <g transform="translate(180 100)"><circle r="7" fill="var(--rosa)"/><g fill="var(--azul)"><ellipse cx="0" cy="-14" rx="5" ry="9"/><ellipse cx="0" cy="14" rx="5" ry="9"/><ellipse cx="-14" cy="0" rx="9" ry="5"/><ellipse cx="14" cy="0" rx="9" ry="5"/></g></g>
+        <g transform="translate(80 172)"><circle r="7" fill="var(--azul)"/><g fill="var(--verde)"><ellipse cx="0" cy="-14" rx="5" ry="9"/><ellipse cx="0" cy="14" rx="5" ry="9"/><ellipse cx="-14" cy="0" rx="9" ry="5"/><ellipse cx="14" cy="0" rx="9" ry="5"/></g></g>
+        <g transform="translate(180 172)"><circle r="7" fill="var(--vermelho)"/><g fill="var(--amarelo)"><ellipse cx="0" cy="-14" rx="5" ry="9"/><ellipse cx="0" cy="14" rx="5" ry="9"/><ellipse cx="-14" cy="0" rx="9" ry="5"/><ellipse cx="14" cy="0" rx="9" ry="5"/></g></g>
+        <rect x="52" y="210" width="24" height="20" fill="#8a5f2c"/><rect x="184" y="210" width="24" height="20" fill="#8a5f2c"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stat"><b data-count="6">6</b><span class="i18n"><span lang="pt">dias por semana abertos</span><span lang="en">days a week open</span></span></div>
+  <div class="stat"><b data-count="100" data-suffix="%">100%</b><span class="i18n"><span lang="pt">pintado à mão</span><span lang="en">painted by hand</span></span></div>
+  <div class="stat"><b>Redondo</b><span class="i18n"><span lang="pt">no coração do Alentejo</span><span lang="en">in the heart of the Alentejo</span></span></div>
+</div>
+
+<section id="historia">
+  <div class="wrap two-col">
+    <div class="prose reveal">
+      <div class="rule"></div>
+      <p class="eyebrow i18n"><span lang="pt">A nossa história</span><span lang="en">Our story</span></p>
+      <div class="section-head"><h2 class="i18n"><span lang="pt">Flores que passam de geração em geração</span><span lang="en">Flowers passed down the generations</span></h2></div>
+      <div class="i18n">
+        <div lang="pt">
+          <p>Em Redondo, vila de oleiros e artesãos do Alentejo, a oficina Zezinha pinta madeira à mão há muitos anos: cadeiras, mesas, arcas, cómodas, tabuleiros e pequenas caixas, cobertos de flores e folhas em cores vivas.</p>
+          <p>Cada motivo segue a tradição popular alentejana — desenhado e pintado peça a peça, à mão, sem dois iguais.</p>
+        </div>
+        <div lang="en">
+          <p>In Redondo, an Alentejo town of potters and artisans, the Zezinha workshop has painted wood by hand for many years: chairs, tables, chests, dressers, trays and little boxes, covered in bright flowers and leaves.</p>
+          <p>Each motif follows Alentejo folk tradition — drawn and painted piece by piece, by hand, no two alike.</p>
+        </div>
+      </div>
+    </div>
+    <div class="woodpanel reveal" aria-hidden="true"><div class="frame"></div>
+      <span class="ph i18n"><span lang="pt">[ foto de uma peça pintada ]</span><span lang="en">[ photo of a painted piece ]</span></span>
+    </div>
+  </div>
+</section>
+
+<section class="cores" id="cores">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow i18n"><span lang="pt">Cores &amp; motivos</span><span lang="en">Colours &amp; motifs</span></p>
+      <h2 class="i18n"><span lang="pt">A paleta da alegria alentejana</span><span lang="en">The palette of Alentejo joy</span></h2>
+    </div>
+    <div class="swatches reveal">
+      <div class="sw"><div class="chip" style="background:var(--vermelho)"></div><p><b>Vermelho</b><span class="i18n"><span lang="pt">flores &amp; papoilas</span><span lang="en">flowers &amp; poppies</span></span></p></div>
+      <div class="sw"><div class="chip" style="background:var(--azul)"></div><p><b>Azul</b><span class="i18n"><span lang="pt">o céu do Alentejo</span><span lang="en">Alentejo sky</span></span></p></div>
+      <div class="sw"><div class="chip" style="background:var(--amarelo)"></div><p><b>Amarelo</b><span class="i18n"><span lang="pt">searas &amp; sol</span><span lang="en">wheat &amp; sun</span></span></p></div>
+      <div class="sw"><div class="chip" style="background:var(--verde)"></div><p><b>Verde</b><span class="i18n"><span lang="pt">folhas &amp; ramos</span><span lang="en">leaves &amp; stems</span></span></p></div>
+      <div class="sw"><div class="chip" style="background:var(--rosa)"></div><p><b>Rosa</b><span class="i18n"><span lang="pt">o toque final</span><span lang="en">the final touch</span></span></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow i18n"><span lang="pt">Galeria</span><span lang="en">Gallery</span></p>
+      <h2 class="i18n"><span lang="pt">Peças da oficina</span><span lang="en">Pieces from the workshop</span></h2>
+    </div>
+    <div class="grid-g reveal">
+      <figure class="tile" tabindex="0" data-cap-pt="Arcas &amp; baús" data-cap-en="Chests &amp; trunks"><div class="fill" style="background:linear-gradient(135deg,#b3803f,#8a5f2c)"></div><span class="z">⤢</span><figcaption class="i18n"><span lang="pt">Arcas &amp; baús</span><span lang="en">Chests &amp; trunks</span></figcaption></figure>
+      <figure class="tile" tabindex="0" data-cap-pt="Cadeiras &amp; bancos" data-cap-en="Chairs &amp; stools"><div class="fill" style="background:linear-gradient(135deg,#2f7d4f,#1f5c39)"></div><span class="z">⤢</span><figcaption class="i18n"><span lang="pt">Cadeiras &amp; bancos</span><span lang="en">Chairs &amp; stools</span></figcaption></figure>
+      <figure class="tile" tabindex="0" data-cap-pt="Cómodas &amp; mesas" data-cap-en="Dressers &amp; tables"><div class="fill" style="background:linear-gradient(135deg,#1f5fa8,#164a82)"></div><span class="z">⤢</span><figcaption class="i18n"><span lang="pt">Cómodas &amp; mesas</span><span lang="en">Dressers &amp; tables</span></figcaption></figure>
+      <figure class="tile" tabindex="0" data-cap-pt="Tabuleiros" data-cap-en="Trays"><div class="fill" style="background:linear-gradient(135deg,#e2a12a,#c07f16)"></div><span class="z">⤢</span><figcaption class="i18n"><span lang="pt">Tabuleiros</span><span lang="en">Trays</span></figcaption></figure>
+      <figure class="tile" tabindex="0" data-cap-pt="Caixas &amp; molduras" data-cap-en="Boxes &amp; frames"><div class="fill" style="background:linear-gradient(135deg,#c8497b,#a3355f)"></div><span class="z">⤢</span><figcaption class="i18n"><span lang="pt">Caixas &amp; molduras</span><span lang="en">Boxes &amp; frames</span></figcaption></figure>
+      <figure class="tile" tabindex="0" data-cap-pt="Por encomenda" data-cap-en="Made to order"><div class="fill" style="background:linear-gradient(135deg,#d8432f,#a83220)"></div><span class="z">⤢</span><figcaption class="i18n"><span lang="pt">Por encomenda</span><span lang="en">Made to order</span></figcaption></figure>
+    </div>
+    <p class="note"><b>◆</b><span class="i18n"><span lang="pt">Imagens ilustrativas. Enviem fotografias das vossas peças e colocamo-las aqui.</span><span lang="en">Placeholder images. Send photos of your pieces and we'll place them here.</span></span></p>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <div class="wrap reveal">
+    <p class="eyebrow i18n"><span lang="pt">Visite-nos</span><span lang="en">Visit us</span></p>
+    <h2 class="i18n"><span lang="pt">Venha ver as cores ao vivo</span><span lang="en">Come see the colours in person</span></h2>
+    <p class="lede i18n" style="text-align:center">
+      <span lang="pt">Peças prontas a levar ou pintadas por encomenda, só para si. Passe pela oficina em Redondo.</span>
+      <span lang="en">Pieces ready to take home or painted to order, just for you. Drop by the workshop in Redondo.</span>
+    </p>
+    <div class="cards">
+      <div class="card">
+        <h3 class="i18n"><span lang="pt">Oficina &amp; loja</span><span lang="en">Workshop &amp; shop</span></h3>
+        <p class="big">Avenida de Gien 5<br>Redondo, Alentejo</p>
+        <p class="i18n"><span lang="pt">Aberto todos os dias exceto domingo</span><span lang="en">Open every day except Sunday</span></p>
+        <p><a href="https://www.google.com/maps/search/?api=1&query=Artesanato+Zezinha+Avenida+de+Gien+Redondo" target="_blank" rel="noopener">→ <span class="i18n"><span lang="pt">Abrir no mapa</span><span lang="en">Open in maps</span></span></a></p>
+      </div>
+      <div class="card">
+        <h3 class="i18n"><span lang="pt">Contacto</span><span lang="en">Contact</span></h3>
+        <p class="big i18n"><span lang="pt">Telefone / e-mail<span class="tocheck">a confirmar</span></span><span lang="en">Phone / email<span class="tocheck">to confirm</span></span></p>
+        <p class="i18n"><span lang="pt">Contactos ainda por confirmar — ver notas da proposta.</span><span lang="en">Contact details still to be confirmed — see proposal notes.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand" style="display:block"><b>Artesanato Zezinha</b><span class="sub">Redondo · Alentejo · Portugal</span></div>
+    <small class="i18n">
+      <span lang="pt">Conceito de website apresentado como proposta ao Artesanato Zezinha. Não é o site oficial e não tem afiliação confirmada. Contactos a confirmar.</span>
+      <span lang="en">Website concept presented as a proposal to Artesanato Zezinha. Not the official site, no confirmed affiliation. Contact details to be confirmed.</span>
+    </small>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagem">
+  <button class="close" aria-label="Fechar" onclick="closeLb()">✕</button>
+  <figure><div class="fill" id="lbFill"></div><figcaption id="lbCap"></figcaption></figure>
+</div>
+
+<script>
+function setLang(l){document.documentElement.setAttribute('data-lang',l);document.documentElement.lang=l;
+  document.getElementById('pt').setAttribute('aria-pressed',l==='pt');document.getElementById('en').setAttribute('aria-pressed',l==='en');
+  try{localStorage.setItem('az_lang',l);}catch(e){}}
+function toggleTheme(){var c=document.documentElement.getAttribute('data-theme');
+  var n=c==='dark'?'light':(c==='light'?'dark':(window.matchMedia('(prefers-color-scheme: dark)').matches?'light':'dark'));
+  document.documentElement.setAttribute('data-theme',n);try{localStorage.setItem('az_theme',n);}catch(e){}}
+function openLb(fill,cap){document.getElementById('lbFill').style.cssText=fill;document.getElementById('lbCap').textContent=cap;document.getElementById('lightbox').classList.add('open');}
+function closeLb(){document.getElementById('lightbox').classList.remove('open');}
+(function(){
+  document.documentElement.classList.add('js');
+  try{var l=localStorage.getItem('az_lang');if(l)setLang(l);var t=localStorage.getItem('az_theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  var links=[].slice.call(document.querySelectorAll('.nav a')),map={};
+  links.forEach(function(a){var id=a.getAttribute('href').slice(1),s=document.getElementById(id);if(s)map[id]=a;});
+  var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.remove('active');});var a=map[e.target.id];if(a)a.classList.add('active');}});},{rootMargin:'-45% 0px -50% 0px'});
+  Object.keys(map).forEach(function(id){so.observe(document.getElementById(id));});
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var co=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;co.unobserve(el);
+    var end=+el.getAttribute('data-count'),suf=el.getAttribute('data-suffix')||'';
+    if(reduce){el.textContent=end+suf;return;}
+    var t0=null;function tick(t){if(!t0)t0=t;var p=Math.min((t-t0)/1300,1);var v=Math.round(end*(0.5-Math.cos(Math.PI*p)/2));el.textContent=v+suf;if(p<1)requestAnimationFrame(tick);}requestAnimationFrame(tick);
+  });},{threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(function(el){co.observe(el);});
+  document.querySelectorAll('.tile').forEach(function(t){
+    function open(){var fill=t.querySelector('.fill').getAttribute('style');var lang=document.documentElement.getAttribute('data-lang');openLb(fill,t.getAttribute('data-cap-'+lang)||'');}
+    t.addEventListener('click',open);t.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open();}});});
+  document.getElementById('lightbox').addEventListener('click',function(e){if(e.target===this)closeLb();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb();});
+})();
+</script>
+</body>
+</html>

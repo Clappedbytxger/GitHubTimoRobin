@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="pt" data-lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Olaria Patalim · São Pedro do Corval</title>
+<meta name="description" content="A olaria mais antiga de São Pedro do Corval — barro do Alentejo, moldado à mão há gerações pela família Patalim.">
+<style>
+/* ---------- Tokens ---------- */
+:root{
+  /* raw palette */
+  --clay:#9e3b24; --clay-deep:#6e2a1a; --clay-soft:#b9532f;
+  --cobalt:#1d4e89; --cobalt-deep:#143a66; --cobalt-soft:#3f6fa8;
+  --olive:#5c6b3a; --ochre:#cf9a38;
+  /* semantic — light (limewash ground, warm-biased neutrals) */
+  --bg:#e7e4da; --surface:#f5f2ea; --surface-2:#efebdf;
+  --text:#2a1f18; --muted:#6b5a4d; --line:#d7d0c1;
+  --accent:var(--clay); --accent-2:var(--cobalt);
+  --hero-bg:var(--cobalt-deep); --hero-ink:#f3eee2; --hero-ink-soft:#c9d5e6;
+  --ribbon-bg:#e4dcc9; --ribbon-ink:#6a5b45;
+  --serif:"Palatino Linotype","Book Antiqua",Palatino,"Iowan Old Style","Hoefler Text",Georgia,serif;
+  --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --wrap:72rem; --pad:clamp(1.15rem,5vw,3rem);
+  --r:14px;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#17110d; --surface:#20180f; --surface-2:#271d12;
+    --text:#ede6d9; --muted:#b6a695; --line:#3a2c1f;
+    --clay:#cd5b3d; --clay-soft:#dd7355; --cobalt:#6a97cf; --cobalt-soft:#87abd9;
+    --accent:var(--clay); --accent-2:var(--cobalt);
+    --hero-bg:#102844; --hero-ink:#f1ede2; --hero-ink-soft:#a9becd;
+    --ribbon-bg:#241a10; --ribbon-ink:#c1ac8c;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#17110d; --surface:#20180f; --surface-2:#271d12;
+  --text:#ede6d9; --muted:#b6a695; --line:#3a2c1f;
+  --clay:#cd5b3d; --clay-soft:#dd7355; --cobalt:#6a97cf; --cobalt-soft:#87abd9;
+  --accent:var(--clay); --accent-2:var(--cobalt);
+  --hero-bg:#102844; --hero-ink:#f1ede2; --hero-ink-soft:#a9becd;
+  --ribbon-bg:#241a10; --ribbon-ink:#c1ac8c;
+}
+:root[data-theme="light"]{
+  --bg:#e7e4da; --surface:#f5f2ea; --surface-2:#efebdf;
+  --text:#2a1f18; --muted:#6b5a4d; --line:#d7d0c1;
+  --clay:#9e3b24; --clay-soft:#b9532f; --cobalt:#1d4e89; --cobalt-soft:#3f6fa8;
+  --accent:var(--clay); --accent-2:var(--cobalt);
+  --hero-bg:var(--cobalt-deep); --hero-ink:#f3eee2; --hero-ink-soft:#c9d5e6;
+  --ribbon-bg:#e4dcc9; --ribbon-ink:#6a5b45;
+}
+
+/* ---------- Base ---------- */
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:var(--sans);font-size:clamp(1rem,.96rem + .2vw,1.08rem);
+  line-height:1.65;-webkit-font-smoothing:antialiased;
+}
+[data-lang="pt"] [lang="en"]{display:none}
+[data-lang="en"] [lang="pt"]{display:none}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.05;
+  text-wrap:balance;letter-spacing:-.01em;margin:0}
+p{margin:0}
+a{color:inherit}
+img{max-width:100%}
+.wrap{width:100%;max-width:var(--wrap);margin-inline:auto;padding-inline:var(--pad)}
+.eyebrow{font-family:var(--sans);font-size:.74rem;font-weight:700;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--accent)}
+.lede{font-size:clamp(1.1rem,1rem + .6vw,1.4rem);color:var(--muted);
+  max-width:46ch;line-height:1.55}
+
+/* ---------- Ribbon (proposal disclaimer) ---------- */
+.ribbon{background:var(--ribbon-bg);color:var(--ribbon-ink);
+  font-size:.78rem;letter-spacing:.02em;text-align:center;
+  padding:.5rem var(--pad);border-bottom:1px solid var(--line)}
+.ribbon strong{color:var(--accent)}
+
+/* ---------- Header ---------- */
+.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .bar{display:flex;align-items:center;gap:1rem;
+  padding-block:.7rem;min-height:60px}
+.brand{display:flex;flex-direction:column;line-height:1.1;margin-right:auto}
+.brand b{font-family:var(--serif);font-size:1.15rem;font-weight:600;letter-spacing:.01em}
+.brand span{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.controls{display:flex;align-items:center;gap:.4rem}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.seg button{font:inherit;font-size:.78rem;font-weight:600;letter-spacing:.04em;
+  background:transparent;color:var(--muted);border:0;padding:.32rem .7rem;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--accent);color:#fff}
+:root[data-theme="dark"] .seg button[aria-pressed="true"],
+.seg button.dark-ink[aria-pressed="true"]{color:#1b120d}
+.icon-btn{font:inherit;font-size:.95rem;background:transparent;border:1px solid var(--line);
+  border-radius:999px;width:2.1rem;height:2.1rem;cursor:pointer;color:var(--text);
+  display:grid;place-items:center}
+.icon-btn:focus-visible,.seg button:focus-visible,a:focus-visible,.btn:focus-visible{
+  outline:2.5px solid var(--accent);outline-offset:3px}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:.5rem;font:inherit;font-weight:600;
+  padding:.8rem 1.3rem;border-radius:999px;text-decoration:none;cursor:pointer;
+  border:1px solid transparent;transition:transform .15s ease,background .2s ease}
+.btn-primary{background:var(--accent);color:#fff}
+:root[data-theme="dark"] .btn-primary{color:#1b120d}
+.btn-ghost{background:transparent;border-color:currentColor;color:var(--hero-ink)}
+.btn:hover{transform:translateY(-2px)}
+@media (prefers-reduced-motion:reduce){.btn:hover{transform:none}}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;background:var(--hero-bg);color:var(--hero-ink);overflow:hidden}
+.hero .tile{position:absolute;inset:0;opacity:.16;pointer-events:none}
+.hero .glow{position:absolute;width:60vw;height:60vw;right:-18vw;top:-22vw;
+  background:radial-gradient(circle,color-mix(in srgb,var(--clay) 60%,transparent),transparent 62%);
+  opacity:.5;pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:2.5rem;
+  align-items:center;padding-block:clamp(3rem,8vw,6rem)}
+.hero .eyebrow{color:var(--hero-ink-soft)}
+.hero h1{font-size:clamp(2.5rem,1.7rem + 4.4vw,4.6rem);margin:.6rem 0 0}
+.hero h1 .accent{color:var(--clay-soft);font-style:italic}
+:root[data-theme="dark"] .hero h1 .accent,
+.hero h1 .accent{color:#e08a5f}
+.hero .sub{color:var(--hero-ink-soft);font-size:clamp(1.05rem,1rem + .5vw,1.3rem);
+  max-width:40ch;margin-top:1.2rem}
+.hero .cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.9rem}
+.hero-art{display:grid;place-items:center}
+.wheel{width:min(34vw,320px);aspect-ratio:1;filter:drop-shadow(0 18px 30px rgba(0,0,0,.35))}
+@media (prefers-reduced-motion:no-preference){
+  .wheel .spin{transform-origin:center;animation:spin 26s linear infinite}
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ---------- Stats strip ---------- */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+  background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat{background:var(--bg);padding:1.5rem var(--pad);text-align:center}
+.stat b{display:block;font-family:var(--serif);font-size:clamp(2rem,1.4rem + 2.4vw,3rem);
+  color:var(--accent);line-height:1;font-variant-numeric:tabular-nums}
+.stat span{display:block;margin-top:.5rem;font-size:.82rem;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--muted)}
+
+/* ---------- Sections ---------- */
+section{padding-block:clamp(3rem,7vw,5.5rem)}
+.section-head{max-width:52ch;margin-bottom:2.4rem}
+.section-head h2{font-size:clamp(1.8rem,1.3rem + 2vw,2.8rem);margin-top:.5rem}
+.two-col{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:center}
+.prose p+p{margin-top:1rem}
+.rule{width:56px;height:3px;background:var(--accent);border-radius:3px;margin-bottom:1.4rem}
+
+/* clay panel (about visual) */
+.claypanel{aspect-ratio:4/5;border-radius:var(--r);position:relative;overflow:hidden;
+  background:
+    radial-gradient(120% 90% at 30% 15%,color-mix(in srgb,var(--clay-soft) 65%,#fff 0%),transparent 55%),
+    linear-gradient(160deg,var(--clay) 0%,var(--clay-deep) 100%);
+  box-shadow:0 24px 50px -24px rgba(110,42,26,.6)}
+.claypanel .rings{position:absolute;inset:0;opacity:.5;mix-blend-mode:soft-light}
+.claypanel .ph{position:absolute;left:1rem;bottom:1rem;font-size:.7rem;letter-spacing:.08em;
+  text-transform:uppercase;color:rgba(255,255,255,.82);background:rgba(0,0,0,.28);
+  padding:.35rem .6rem;border-radius:6px}
+
+/* process (real sequence) */
+.process{background:var(--surface)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;counter-reset:step}
+.step{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:1.4rem 1.2rem}
+.step .n{counter-increment:step;font-family:var(--serif);font-size:1.05rem;font-weight:700;
+  color:#fff;background:var(--accent);width:2rem;height:2rem;border-radius:50%;
+  display:grid;place-items:center;font-variant-numeric:tabular-nums}
+:root[data-theme="dark"] .step .n{color:#1b120d}
+.step .n::before{content:counter(step,decimal-leading-zero)}
+.step h3{font-size:1.15rem;margin:.9rem 0 .35rem}
+.step p{font-size:.92rem;color:var(--muted)}
+
+/* gallery */
+.grid-g{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+.frame{position:relative;aspect-ratio:1;border-radius:var(--r);overflow:hidden;
+  border:1px solid var(--line);background:var(--surface-2)}
+.frame .fill{position:absolute;inset:0}
+.frame figcaption{position:absolute;left:0;right:0;bottom:0;padding:.7rem .8rem;
+  font-size:.82rem;background:linear-gradient(transparent,rgba(0,0,0,.5));color:#fff}
+.frame .tag{position:absolute;top:.6rem;left:.6rem;font-size:.62rem;letter-spacing:.1em;
+  text-transform:uppercase;background:color-mix(in srgb,var(--bg) 85%,transparent);
+  color:var(--muted);padding:.25rem .5rem;border-radius:5px;border:1px solid var(--line)}
+.note{margin-top:1.2rem;font-size:.85rem;color:var(--muted);display:flex;gap:.5rem;align-items:flex-start}
+.note b{color:var(--accent)}
+
+/* visit + contact */
+.visit{background:var(--surface)}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+.card{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:1.6rem}
+.card h3{font-size:1.05rem;letter-spacing:.02em}
+.card .big{font-family:var(--serif);font-size:1.5rem;margin:.5rem 0;color:var(--text)}
+.card p,.card a{color:var(--muted);text-decoration:none}
+.card a:hover{color:var(--accent)}
+.tocheck{display:inline-block;font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--ochre);border:1px solid color-mix(in srgb,var(--ochre) 50%,var(--line));
+  padding:.05rem .4rem;border-radius:5px;margin-left:.4rem;vertical-align:middle}
+.contact{text-align:center}
+.contact h2{font-size:clamp(1.9rem,1.4rem + 2.4vw,3rem);max-width:20ch;margin-inline:auto}
+.contact .lede{margin:1rem auto 2rem}
+.contact .cta{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+.contact .btn-primary{color:#fff}
+:root[data-theme="dark"] .contact .btn-primary{color:#1b120d}
+
+/* footer */
+footer{background:var(--hero-bg);color:var(--hero-ink);padding-block:2.5rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between;align-items:center}
+footer .brand b{color:var(--hero-ink)}
+footer .brand span{color:var(--hero-ink-soft)}
+footer small{color:var(--hero-ink-soft);font-size:.78rem;max-width:44ch;display:block}
+
+/* reveal — progressive enhancement: visible by default, hidden only when JS is on */
+.reveal{transition:opacity .7s ease,transform .7s ease}
+html.js .reveal{opacity:0;transform:translateY(18px)}
+html.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html.js .reveal{opacity:1;transform:none;transition:none}}
+
+/* ---------- Responsive ---------- */
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr;gap:1.5rem}
+  .hero-art{order:-1;justify-content:flex-start}
+  .wheel{width:min(52vw,220px)}
+  .two-col{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .grid-g{grid-template-columns:1fr 1fr}
+  .cards{grid-template-columns:1fr}
+}
+@media (max-width:480px){
+  .stats{grid-template-columns:1fr;}
+  .grid-g{grid-template-columns:1fr 1fr}
+  .brand span{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- Proposal disclaimer (honesty: this is a concept, not the official site) -->
+<div class="ribbon">
+  <span class="i18n">
+    <span lang="pt"><strong>Conceito de website</strong> criado como proposta para a Olaria Patalim — ainda não é o site oficial.</span>
+    <span lang="en"><strong>Website concept</strong> created as a proposal for Olaria Patalim — not yet the official site.</span>
+  </span>
+</div>
+
+<header class="top">
+  <div class="wrap bar">
+    <div class="brand">
+      <b>Olaria Patalim</b>
+      <span>São Pedro do Corval · Alentejo</span>
+    </div>
+    <div class="controls">
+      <div class="seg" role="group" aria-label="Idioma / Language">
+        <button id="pt" aria-pressed="true" onclick="setLang('pt')">PT</button>
+        <button id="en" aria-pressed="false" onclick="setLang('en')">EN</button>
+      </div>
+      <button class="icon-btn" id="theme" aria-label="Alternar tema claro/escuro" onclick="toggleTheme()">◐</button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <svg class="tile" aria-hidden="true" width="100%" height="100%">
+    <defs>
+      <pattern id="azulejo" width="88" height="88" patternUnits="userSpaceOnUse" patternTransform="rotate(0)">
+        <rect width="88" height="88" fill="none"/>
+        <g fill="none" stroke="#f3eee2" stroke-width="1.4">
+          <circle cx="44" cy="44" r="15"/>
+          <path d="M44 8 L58 30 L44 44 L30 30 Z"/>
+          <path d="M44 80 L58 58 L44 44 L30 58 Z"/>
+          <path d="M8 44 L30 58 L44 44 L30 30 Z"/>
+          <path d="M80 44 L58 58 L44 44 L58 30 Z"/>
+          <circle cx="44" cy="44" r="4" fill="#f3eee2" stroke="none"/>
+          <circle cx="0" cy="0" r="6"/><circle cx="88" cy="0" r="6"/>
+          <circle cx="0" cy="88" r="6"/><circle cx="88" cy="88" r="6"/>
+        </g>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#azulejo)"/>
+  </svg>
+  <div class="glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="eyebrow i18n"><span lang="pt">A olaria mais antiga da aldeia</span><span lang="en">The village's oldest pottery</span></p>
+      <h1 class="i18n">
+        <span lang="pt">Barro do Alentejo,<br><span class="accent">moldado à mão</span><br>há gerações.</span>
+        <span lang="en">Alentejo clay,<br><span class="accent">shaped by hand</span><br>for generations.</span>
+      </h1>
+      <p class="sub i18n">
+        <span lang="pt">Em São Pedro do Corval, a capital portuguesa do barro, a família Patalim trabalha o barro há cerca de 160 anos.</span>
+        <span lang="en">In São Pedro do Corval, Portugal's capital of clay, the Patalim family has worked the earth for around 160 years.</span>
+      </p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#visita"><span class="i18n"><span lang="pt">Visitar a olaria</span><span lang="en">Visit the workshop</span></span></a>
+        <a class="btn btn-ghost" href="#galeria"><span class="i18n"><span lang="pt">Ver as peças</span><span lang="en">See the pieces</span></span></a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <!-- thrown-pot / potter's wheel: concentric rings -->
+      <svg class="wheel" viewBox="0 0 200 200" role="img" aria-label="Peça de barro vista de cima / Clay piece from above">
+        <circle cx="100" cy="100" r="96" fill="#0e2440"/>
+        <g class="spin" fill="none" stroke="#e08a5f" stroke-width="2.2">
+          <circle cx="100" cy="100" r="88" stroke="#c9d5e6" stroke-width="1"/>
+          <circle cx="100" cy="100" r="74"/>
+          <circle cx="100" cy="100" r="60" stroke="#e6b48f"/>
+          <circle cx="100" cy="100" r="46"/>
+          <circle cx="100" cy="100" r="32" stroke="#c9d5e6"/>
+          <circle cx="100" cy="100" r="18"/>
+          <circle cx="100" cy="100" r="6" fill="#e08a5f" stroke="none"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat"><b>~160</b><span class="i18n"><span lang="pt">anos de tradição</span><span lang="en">years of tradition</span></span></div>
+  <div class="stat"><b>20+</b><span class="i18n"><span lang="pt">olarias que aprenderam aqui</span><span lang="en">potteries schooled here</span></span></div>
+  <div class="stat"><b>2</b><span class="i18n"><span lang="pt">irmãos oleiros: Nélia &amp; Rui</span><span lang="en">sibling potters: Nélia &amp; Rui</span></span></div>
+</div>
+
+<!-- HISTÓRIA -->
+<section id="historia">
+  <div class="wrap two-col">
+    <div class="prose reveal">
+      <div class="rule"></div>
+      <p class="eyebrow i18n"><span lang="pt">A nossa história</span><span lang="en">Our story</span></p>
+      <div class="section-head"><h2 class="i18n"><span lang="pt">A família de oleiros mais antiga do Corval</span><span lang="en">The oldest family of potters in Corval</span></h2></div>
+      <div class="i18n">
+        <div lang="pt">
+          <p>Há cerca de 160 anos que as nossas mãos moldam o barro vermelho do Alentejo. A Olaria Patalim é a mais antiga de São Pedro do Corval — e, ao longo das gerações, foi a escola onde mais de vinte outras olarias da aldeia aprenderam o ofício.</p>
+          <p>Hoje, os irmãos <strong>Nélia</strong> e <strong>Rui Patalim</strong> continuam a tradição: peças decorativas com alma e louça de barro para o dia a dia, feitas uma a uma na roda de oleiro.</p>
+        </div>
+        <div lang="en">
+          <p>For around 160 years our hands have shaped the red clay of the Alentejo. Olaria Patalim is the oldest in São Pedro do Corval — and across the generations it became the school where more than twenty of the village's other potteries learned the craft.</p>
+          <p>Today the siblings <strong>Nélia</strong> and <strong>Rui Patalim</strong> carry the tradition on: decorative pieces with soul and everyday earthenware, each thrown one by one on the potter's wheel.</p>
+        </div>
+      </div>
+    </div>
+    <div class="claypanel reveal" aria-hidden="true">
+      <svg class="rings" viewBox="0 0 200 250" preserveAspectRatio="xMidYMid slice">
+        <g fill="none" stroke="#fff" stroke-width="1">
+          <ellipse cx="100" cy="125" rx="80" ry="96"/>
+          <ellipse cx="100" cy="125" rx="62" ry="76"/>
+          <ellipse cx="100" cy="125" rx="44" ry="56"/>
+          <ellipse cx="100" cy="125" rx="26" ry="34"/>
+        </g>
+      </svg>
+      <span class="ph i18n"><span lang="pt">[ foto da olaria ]</span><span lang="en">[ workshop photo ]</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESSO (real sequence → numbered) -->
+<section class="process" id="processo">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow i18n"><span lang="pt">Do torrão à peça</span><span lang="en">From lump to piece</span></p>
+      <h2 class="i18n"><span lang="pt">Como nasce cada peça</span><span lang="en">How each piece is born</span></h2>
+    </div>
+    <div class="steps reveal">
+      <div class="step">
+        <div class="n" aria-hidden="true"></div>
+        <h3 class="i18n"><span lang="pt">Amassar</span><span lang="en">Knead</span></h3>
+        <p class="i18n"><span lang="pt">O barro vermelho local é amassado até ficar liso, sem bolhas de ar.</span><span lang="en">Local red clay is wedged until smooth, with no trapped air.</span></p>
+      </div>
+      <div class="step">
+        <div class="n" aria-hidden="true"></div>
+        <h3 class="i18n"><span lang="pt">Moldar na roda</span><span lang="en">Throw</span></h3>
+        <p class="i18n"><span lang="pt">Na roda de oleiro, as mãos levantam a forma — jarras, pratos, alguidares.</span><span lang="en">On the wheel, the hands raise the form — jugs, plates, bowls.</span></p>
+      </div>
+      <div class="step">
+        <div class="n" aria-hidden="true"></div>
+        <h3 class="i18n"><span lang="pt">Secar</span><span lang="en">Dry</span></h3>
+        <p class="i18n"><span lang="pt">As peças descansam e secam lentamente antes do fogo.</span><span lang="en">The pieces rest and dry slowly before the fire.</span></p>
+      </div>
+      <div class="step">
+        <div class="n" aria-hidden="true"></div>
+        <h3 class="i18n"><span lang="pt">Cozer no forno</span><span lang="en">Fire</span></h3>
+        <p class="i18n"><span lang="pt">O forno fixa o barro para sempre — e nasce a cor de terracota.</span><span lang="en">The kiln sets the clay for good — and the terracotta colour is born.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow i18n"><span lang="pt">Galeria</span><span lang="en">Gallery</span></p>
+      <h2 class="i18n"><span lang="pt">Peças da olaria</span><span lang="en">Pieces from the workshop</span></h2>
+    </div>
+    <div class="grid-g reveal">
+      <figure class="frame">
+        <div class="fill" style="background:radial-gradient(120% 100% at 30% 20%,#c56a44,#8a3420)"></div>
+        <span class="tag i18n"><span lang="pt">exemplo</span><span lang="en">placeholder</span></span>
+        <figcaption class="i18n"><span lang="pt">Peças decorativas</span><span lang="en">Decorative pieces</span></figcaption>
+      </figure>
+      <figure class="frame">
+        <div class="fill" style="background:radial-gradient(120% 100% at 70% 30%,#b98a4e,#7d4f1f)"></div>
+        <span class="tag i18n"><span lang="pt">exemplo</span><span lang="en">placeholder</span></span>
+        <figcaption class="i18n"><span lang="pt">Louça do dia a dia</span><span lang="en">Everyday earthenware</span></figcaption>
+      </figure>
+      <figure class="frame">
+        <div class="fill" style="background:radial-gradient(120% 100% at 40% 60%,#3f6fa8,#183e6a)"></div>
+        <span class="tag i18n"><span lang="pt">exemplo</span><span lang="en">placeholder</span></span>
+        <figcaption class="i18n"><span lang="pt">Detalhes pintados à mão</span><span lang="en">Hand-painted details</span></figcaption>
+      </figure>
+      <figure class="frame">
+        <div class="fill" style="background:radial-gradient(120% 100% at 60% 40%,#c56a44,#6e2a1a)"></div>
+        <span class="tag i18n"><span lang="pt">exemplo</span><span lang="en">placeholder</span></span>
+        <figcaption class="i18n"><span lang="pt">Jarras &amp; bilhas</span><span lang="en">Jugs &amp; pitchers</span></figcaption>
+      </figure>
+      <figure class="frame">
+        <div class="fill" style="background:radial-gradient(120% 100% at 30% 50%,#7f8a52,#4c5730)"></div>
+        <span class="tag i18n"><span lang="pt">exemplo</span><span lang="en">placeholder</span></span>
+        <figcaption class="i18n"><span lang="pt">Alguidares tradicionais</span><span lang="en">Traditional bowls</span></figcaption>
+      </figure>
+      <figure class="frame">
+        <div class="fill" style="background:radial-gradient(120% 100% at 55% 25%,#caa06a,#8a3420)"></div>
+        <span class="tag i18n"><span lang="pt">exemplo</span><span lang="en">placeholder</span></span>
+        <figcaption class="i18n"><span lang="pt">Peças por encomenda</span><span lang="en">Made to order</span></figcaption>
+      </figure>
+    </div>
+    <p class="note"><b>◆</b>
+      <span class="i18n">
+        <span lang="pt">As imagens são espaços reservados. Basta enviar fotografias das vossas peças e colocamo-las aqui.</span>
+        <span lang="en">These images are placeholders. Just send photos of your pieces and we'll drop them in here.</span>
+      </span>
+    </p>
+  </div>
+</section>
+
+<!-- VISITA -->
+<section class="visit" id="visita">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow i18n"><span lang="pt">Visite-nos</span><span lang="en">Visit us</span></p>
+      <h2 class="i18n"><span lang="pt">Onde nos encontrar</span><span lang="en">Where to find us</span></h2>
+    </div>
+    <div class="cards reveal">
+      <div class="card">
+        <h3 class="i18n"><span lang="pt">Morada</span><span lang="en">Address</span></h3>
+        <p class="big">Rua de Monsaraz 12<br>7200-131 São Pedro do Corval</p>
+        <p class="i18n"><span lang="pt">Reguengos de Monsaraz, Alentejo, Portugal</span><span lang="en">Reguengos de Monsaraz, Alentejo, Portugal</span></p>
+        <p><a href="https://www.google.com/maps/search/?api=1&query=Olaria+Patalim+Rua+de+Monsaraz+12+S%C3%A3o+Pedro+do+Corval" target="_blank" rel="noopener">→ <span class="i18n"><span lang="pt">Abrir no mapa</span><span lang="en">Open in maps</span></span></a></p>
+      </div>
+      <div class="card">
+        <h3 class="i18n"><span lang="pt">Horário</span><span lang="en">Opening hours</span></h3>
+        <p class="big">08:00 – 12:30<br>13:30 – 17:00</p>
+        <p class="i18n"><span lang="pt">Telefone <span class="tocheck">confirmar</span></span><span lang="en">Phone <span class="tocheck">to confirm</span></span></p>
+        <p><a href="tel:+351967573883">→ +351 967 573 883</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="contact" id="contacto">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow i18n"><span lang="pt">Encomendas &amp; peças especiais</span><span lang="en">Orders &amp; special pieces</span></p>
+      <h2 class="i18n"><span lang="pt">Uma peça feita à mão, só para si</span><span lang="en">A handmade piece, just for you</span></h2>
+      <p class="lede i18n">
+        <span lang="pt">Procura uma peça decorativa, louça tradicional ou uma encomenda especial? Fale connosco — teremos todo o gosto em ajudar.</span>
+        <span lang="en">Looking for a decorative piece, traditional earthenware or a special commission? Get in touch — we'd be glad to help.</span>
+      </p>
+      <div class="cta">
+        <a class="btn btn-primary" href="tel:+351967573883">☎ +351 967 573 883</a>
+        <a class="btn" style="border-color:var(--line)" href="https://www.google.com/maps/search/?api=1&query=Olaria+Patalim+S%C3%A3o+Pedro+do+Corval" target="_blank" rel="noopener"><span class="i18n"><span lang="pt">Como chegar</span><span lang="en">Get directions</span></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand">
+      <b>Olaria Patalim</b>
+      <span>São Pedro do Corval · Alentejo · Portugal</span>
+    </div>
+    <small class="i18n">
+      <span lang="pt">Conceito de website apresentado como proposta à Olaria Patalim. Não é o site oficial e não tem qualquer afiliação confirmada. Contactos indicados a confirmar.</span>
+      <span lang="en">Website concept presented as a proposal to Olaria Patalim. This is not the official site and has no confirmed affiliation. Listed contact details to be confirmed.</span>
+    </small>
+  </div>
+</footer>
+
+<script>
+function setLang(l){
+  document.documentElement.setAttribute('data-lang',l);
+  document.documentElement.lang=l;
+  document.getElementById('pt').setAttribute('aria-pressed',l==='pt');
+  document.getElementById('en').setAttribute('aria-pressed',l==='en');
+  try{localStorage.setItem('op_lang',l);}catch(e){}
+}
+function toggleTheme(){
+  var cur=document.documentElement.getAttribute('data-theme');
+  var next = cur==='dark' ? 'light' : (cur==='light' ? 'dark' :
+    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'light' : 'dark'));
+  document.documentElement.setAttribute('data-theme',next);
+  try{localStorage.setItem('op_theme',next);}catch(e){}
+}
+(function(){
+  document.documentElement.classList.add('js');
+  try{
+    var l=localStorage.getItem('op_lang'); if(l) setLang(l);
+    var t=localStorage.getItem('op_theme'); if(t) document.documentElement.setAttribute('data-theme',t);
+  }catch(e){}
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+})();
+</script>
+</body>
+</html>

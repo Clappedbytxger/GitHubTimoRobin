@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="id" data-lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abhati Studio · Batik Tulis Pewarna Alam · Yogyakarta</title>
+<meta name="description" content="Batik tulis dengan pewarna alami, dibuat oleh keluarga di Yogyakarta. Kain batik, kelas membatik di halaman rumah, dan pesanan khusus.">
+<style>
+:root{
+  --indigo:#1f3a5f; --indigo-deep:#14294a; --soga:#7a4a24; --soga-soft:#9a6636; --emas:#c79a3e; --krem:#f0e7d3;
+  --bg:#f0e7d3; --surface:#f8f1e2; --surface-2:#e5d9bf; --line:#d8c9a9;
+  --text:#221d16; --muted:#5f5443; --dim:#867a63;
+  --accent:var(--indigo); --accent2:var(--soga); --hero-ink:#f2eedf;
+  --serif:"Palatino Linotype","Book Antiqua",Palatino,"Iowan Old Style","Hoefler Text",Georgia,serif;
+  --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --wrap:74rem; --pad:clamp(1.15rem,5vw,3rem); --r:13px;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#14110a;--surface:#1c1810;--surface-2:#251f14;--line:#352b1c;
+    --text:#efe7d6;--muted:#bcae92;--dim:#867a63;
+    --indigo:#5f8ac0;--soga:#b3814a;--emas:#e0bd66;--accent:var(--indigo);--accent2:var(--soga);}
+}
+:root[data-theme="dark"]{--bg:#14110a;--surface:#1c1810;--surface-2:#251f14;--line:#352b1c;
+  --text:#efe7d6;--muted:#bcae92;--dim:#867a63;--indigo:#5f8ac0;--soga:#b3814a;--emas:#e0bd66;--accent:var(--indigo);--accent2:var(--soga);}
+:root[data-theme="light"]{--bg:#f0e7d3;--surface:#f8f1e2;--surface-2:#e5d9bf;--line:#d8c9a9;
+  --text:#221d16;--muted:#5f5443;--dim:#867a63;--indigo:#1f3a5f;--soga:#7a4a24;--emas:#c79a3e;--accent:var(--indigo);--accent2:var(--soga);}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:clamp(1rem,.96rem + .2vw,1.08rem);line-height:1.65;-webkit-font-smoothing:antialiased}
+[data-lang="id"] [lang="en"]{display:none}
+[data-lang="en"] [lang="id"]{display:none}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;text-wrap:balance;letter-spacing:-.005em;margin:0}
+p{margin:0}a{color:inherit}
+.wrap{width:100%;max-width:var(--wrap);margin-inline:auto;padding-inline:var(--pad)}
+.eyebrow{font:700 .74rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.lede{font-size:clamp(1.1rem,1rem + .6vw,1.4rem);color:var(--muted);max-width:50ch;line-height:1.55}
+
+.ribbon{background:var(--surface-2);color:var(--muted);font-size:.78rem;text-align:center;padding:.5rem var(--pad);border-bottom:1px solid var(--line)}
+.ribbon strong{color:var(--accent)}
+.top{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(9px);border-bottom:1px solid var(--line)}
+.top .bar{display:flex;align-items:center;gap:1rem;min-height:60px;padding-block:.6rem}
+.brand{display:flex;flex-direction:column;line-height:1.12;margin-right:auto}
+.brand b{font-family:var(--serif);font-size:1.1rem;font-weight:600}
+.brand span{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.nav{display:flex;gap:1.2rem;margin-right:1rem}
+.nav a{font-size:.82rem;color:var(--muted);text-decoration:none;padding:.2rem 0;border-bottom:2px solid transparent;transition:.2s}
+.nav a:hover{color:var(--text)}.nav a.active{color:var(--accent);border-color:var(--accent)}
+@media (max-width:900px){.nav{display:none}}
+.controls{display:flex;align-items:center;gap:.4rem}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.seg button{font:600 .78rem var(--sans);background:transparent;color:var(--muted);border:0;padding:.32rem .62rem;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--accent);color:#fff}
+.icon-btn{font-size:.95rem;background:transparent;border:1px solid var(--line);border-radius:999px;width:2.1rem;height:2.1rem;cursor:pointer;color:var(--text);display:grid;place-items:center}
+a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2.5px solid var(--accent);outline-offset:3px}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font:600 1rem var(--sans);padding:.8rem 1.35rem;border-radius:999px;text-decoration:none;cursor:pointer;border:1px solid transparent;transition:transform .15s}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-soga{background:var(--soga);color:#fff}
+.btn-ghost{background:transparent;border-color:color-mix(in srgb,var(--hero-ink) 55%,transparent);color:var(--hero-ink)}
+.btn:hover{transform:translateY(-2px)}
+@media (prefers-reduced-motion:reduce){.btn:hover{transform:none}}
+
+.hero{position:relative;overflow:hidden;color:var(--hero-ink);background:linear-gradient(160deg,#22406a,#111f38)}
+.hero .tile{position:absolute;inset:0;opacity:.16;pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:2.5rem;align-items:center;padding-block:clamp(2.8rem,7vw,6rem)}
+.hero h1{font-size:clamp(2.4rem,1.6rem + 4.4vw,4.4rem);margin:.3rem 0 0}
+.hero h1 em{color:var(--emas);font-style:italic}
+.hero .sub{color:#d3dcea;font-size:clamp(1.05rem,1rem + .5vw,1.28rem);max-width:42ch;margin-top:1.2rem}
+.hero .cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.9rem}
+.canting{width:min(30vw,280px);margin-inline:auto;filter:drop-shadow(0 18px 30px rgba(0,0,0,.4))}
+
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border-block:1px solid var(--line)}
+.info .cell{background:var(--bg);padding:1.5rem var(--pad);text-align:center}
+.info .cell b{display:block;font-family:var(--serif);font-size:1.18rem;color:var(--accent)}
+.info .cell span{display:block;margin-top:.35rem;font-size:.82rem;color:var(--muted)}
+
+section{padding-block:clamp(3rem,7vw,5.5rem)}
+.section-head{max-width:54ch;margin-bottom:2.2rem}
+.section-head h2{font-size:clamp(1.8rem,1.3rem + 2vw,2.8rem);margin-top:.5rem}
+.rule{width:56px;height:3px;background:var(--accent);border-radius:3px;margin-bottom:1.3rem}
+.two-col{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:center}
+.prose p+p{margin-top:1rem}
+.batikpanel{aspect-ratio:4/5;border-radius:var(--r);position:relative;overflow:hidden;border:1px solid var(--line);background:var(--indigo-deep)}
+.batikpanel .ph{position:absolute;left:1rem;bottom:1rem;font:.68rem/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:#fff;background:rgba(0,0,0,.32);padding:.35rem .6rem;border-radius:6px}
+
+.process{background:var(--surface)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;counter-reset:s}
+.step{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:1.4rem 1.2rem}
+.step .n{counter-increment:s;width:2rem;height:2rem;border-radius:50%;background:var(--accent);color:#fff;font-family:var(--serif);font-weight:700;display:grid;place-items:center;font-variant-numeric:tabular-nums}
+.step .n::before{content:counter(s,decimal-leading-zero)}
+.step h3{font-size:1.1rem;margin:.9rem 0 .35rem}.step p{font-size:.9rem;color:var(--muted)}
+
+.class{position:relative;overflow:hidden;color:#f2eedf;background:
+  radial-gradient(60% 60% at 78% 24%,color-mix(in srgb,var(--soga) 44%,transparent),transparent 60%),
+  linear-gradient(150deg,#1c3557,#111d33)}
+.class .wrap{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;padding-block:clamp(2.6rem,6vw,4.4rem)}
+.class h2{font-size:clamp(1.7rem,1.2rem+1.8vw,2.6rem)}
+.class p{color:#d6ddea;margin-top:.8rem;max-width:40ch}
+.class .badge{display:inline-block;font:700 .7rem/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--emas);border:1px solid color-mix(in srgb,var(--emas) 55%,transparent);padding:.4rem .7rem;border-radius:999px;margin-bottom:1rem}
+.class .art{display:grid;place-items:center}
+@media (max-width:760px){.class .wrap{grid-template-columns:1fr}.class .art{order:-1}}
+
+.grid-g{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+.tile2{position:relative;aspect-ratio:1;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);cursor:zoom-in;background:var(--surface-2)}
+.tile2 .fill{position:absolute;inset:0}
+.tile2 figcaption{position:absolute;left:0;right:0;bottom:0;padding:.7rem .8rem;font-size:.82rem;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.55))}
+.tile2 .z{position:absolute;top:.55rem;right:.6rem;width:1.8rem;height:1.8rem;border-radius:50%;background:rgba(0,0,0,.35);color:#fff;display:grid;place-items:center;font-size:.9rem;border:1px solid rgba(255,255,255,.3)}
+.note{margin-top:1.2rem;font-size:.85rem;color:var(--muted);display:flex;gap:.5rem}.note b{color:var(--accent)}
+.lightbox{position:fixed;inset:0;z-index:60;background:rgba(10,16,28,.9);display:none;place-items:center;padding:5vw;backdrop-filter:blur(3px)}
+.lightbox.open{display:grid}.lightbox figure{margin:0;max-width:560px;width:100%}
+.lightbox .fill{aspect-ratio:1;border-radius:var(--r);border:1px solid #2a3e5c}
+.lightbox figcaption{color:#eef2f8;text-align:center;margin-top:1rem;font-size:1.05rem}
+.lightbox .close{position:absolute;top:1.2rem;right:1.3rem;background:transparent;border:1px solid #3d5478;color:#eef2f8;width:2.6rem;height:2.6rem;border-radius:50%;font-size:1.2rem;cursor:pointer}
+
+.visit{background:var(--surface)}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+.card{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:1.6rem}
+.card h3{font-size:1.05rem}.card .big{font-family:var(--serif);font-size:1.2rem;margin:.5rem 0;color:var(--text)}
+.card p,.card a{color:var(--muted);text-decoration:none}.card a:hover{color:var(--accent)}
+.tocheck{display:inline-block;font:.66rem/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--emas);border:1px solid color-mix(in srgb,var(--emas) 45%,var(--line));padding:.1rem .4rem;border-radius:5px;margin-left:.35rem}
+@media (max-width:640px){.cards{grid-template-columns:1fr}}
+
+footer{background:#111f38;color:#e6ecf4;padding-block:2.6rem;border-top:1px solid var(--line)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between;align-items:center}
+footer b{color:#fff}footer .sub{color:#a9b8ce;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase}
+footer small{color:#a9b8ce;font-size:.78rem;max-width:50ch;display:block}
+
+.reveal{transition:opacity .7s ease,transform .7s ease}
+html.js .reveal{opacity:0;transform:translateY(18px)}
+html.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html.js .reveal{opacity:1;transform:none;transition:none}}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr;gap:1.6rem}.canting{order:-1;width:min(44vw,200px)}.two-col{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.info{grid-template-columns:1fr}.grid-g{grid-template-columns:1fr 1fr}.brand span{display:none}}
+</style>
+</head>
+<body>
+
+<div class="ribbon"><span class="i18n">
+  <span lang="id"><strong>Konsep situs web</strong> — dibuat sebagai usulan untuk Abhati Studio, belum situs resmi.</span>
+  <span lang="en"><strong>Website concept</strong> — created as a proposal for Abhati Studio, not yet the official site.</span>
+</span></div>
+
+<header class="top">
+  <div class="wrap bar">
+    <div class="brand"><b>Abhati Studio</b><span>Batik · Yogyakarta</span></div>
+    <nav class="nav" aria-label="Bagian">
+      <a href="#studio" class="i18n"><span lang="id">Studio</span><span lang="en">Studio</span></a>
+      <a href="#proses" class="i18n"><span lang="id">Proses</span><span lang="en">Process</span></a>
+      <a href="#kelas" class="i18n"><span lang="id">Kelas</span><span lang="en">Class</span></a>
+      <a href="#galeri" class="i18n"><span lang="id">Galeri</span><span lang="en">Gallery</span></a>
+      <a href="#kontak" class="i18n"><span lang="id">Kontak</span><span lang="en">Contact</span></a>
+    </nav>
+    <div class="controls">
+      <div class="seg" role="group" aria-label="Bahasa"><button id="id" aria-pressed="true" onclick="setLang('id')">ID</button><button id="en" aria-pressed="false" onclick="setLang('en')">EN</button></div>
+      <button class="icon-btn" aria-label="Tema terang/gelap" onclick="toggleTheme()">◐</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <svg class="tile" aria-hidden="true" width="100%" height="100%">
+    <defs><pattern id="kawung" width="64" height="64" patternUnits="userSpaceOnUse">
+      <g fill="none" stroke="#f2eedf" stroke-width="1.2">
+        <ellipse cx="16" cy="16" rx="12" ry="16"/><ellipse cx="16" cy="16" rx="16" ry="12"/>
+        <ellipse cx="48" cy="48" rx="12" ry="16"/><ellipse cx="48" cy="48" rx="16" ry="12"/>
+        <circle cx="32" cy="32" r="2"/>
+      </g>
+    </pattern></defs>
+    <rect width="100%" height="100%" fill="url(#kawung)"/>
+  </svg>
+  <div class="wrap">
+    <div>
+      <p class="eyebrow i18n"><span lang="id">Batik tulis pewarna alam</span><span lang="en">Hand-drawn batik, natural dyes</span></p>
+      <h1 class="i18n">
+        <span lang="id">Lilin, kain, dan <em>warna dari alam</em>.</span>
+        <span lang="en">Wax, cloth, and <em>colour from nature</em>.</span>
+      </h1>
+      <p class="sub i18n">
+        <span lang="id">Di sebuah rumah di Yogyakarta, ibu dan dua putrinya membuat batik tulis dengan pewarna alami — sehelai demi sehelai.</span>
+        <span lang="en">In a home in Yogyakarta, a mother and her two daughters make hand-drawn batik with natural dyes — one cloth at a time.</span>
+      </p>
+      <div class="cta">
+        <a class="btn btn-soga" href="#kelas"><span class="i18n"><span lang="id">Ikuti kelas batik</span><span lang="en">Join a batik class</span></span></a>
+        <a class="btn btn-ghost" href="#galeri"><span class="i18n"><span lang="id">Lihat kain batik</span><span lang="en">See the batik</span></span></a>
+      </div>
+    </div>
+    <div>
+      <svg class="canting" viewBox="0 0 200 200" role="img" aria-label="Canting batik">
+        <circle cx="100" cy="100" r="96" fill="#0f1f38"/>
+        <g fill="none" stroke="#c79a3e" stroke-width="2"><ellipse cx="100" cy="100" rx="30" ry="42"/><ellipse cx="100" cy="100" rx="42" ry="30"/><ellipse cx="60" cy="60" rx="14" ry="20"/><ellipse cx="140" cy="140" rx="14" ry="20"/><ellipse cx="140" cy="60" rx="20" ry="14"/><ellipse cx="60" cy="140" rx="20" ry="14"/></g>
+        <g stroke="#5f8ac0" stroke-width="2" fill="none"><circle cx="100" cy="100" r="6"/></g>
+        <g><rect x="150" y="40" width="6" height="40" rx="3" fill="#7a4a24" transform="rotate(35 153 60)"/><circle cx="140" cy="82" r="6" fill="#c79a3e"/></g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="info">
+  <div class="cell"><b class="i18n"><span lang="id">Batik tulis</span><span lang="en">Hand-drawn batik</span></b><span class="i18n"><span lang="id">digambar dengan canting &amp; lilin</span><span lang="en">drawn with canting &amp; wax</span></span></div>
+  <div class="cell"><b class="i18n"><span lang="id">Pewarna alami</span><span lang="en">Natural dyes</span></b><span class="i18n"><span lang="id">indigo, soga, akar &amp; kulit kayu</span><span lang="en">indigo, soga, roots &amp; bark</span></span></div>
+  <div class="cell"><b class="i18n"><span lang="id">Kelas di rumah</span><span lang="en">Classes at home</span></b><span class="i18n"><span lang="id">suasana hangat keluarga</span><span lang="en">a warm family setting</span></span></div>
+</div>
+
+<section id="studio">
+  <div class="wrap two-col">
+    <div class="prose reveal">
+      <div class="rule"></div>
+      <p class="eyebrow i18n"><span lang="id">Studio kami</span><span lang="en">Our studio</span></p>
+      <div class="section-head"><h2 class="i18n"><span lang="id">Batik dari sebuah rumah keluarga</span><span lang="en">Batik from a family home</span></h2></div>
+      <div class="i18n">
+        <div lang="id"><p>Abhati Studio bukan pabrik — ini rumah keluarga dengan halaman kecil penuh tanaman. Di sini, ibu dan dua putrinya menggambar motif dengan canting dan lilin panas, lalu mewarnai kain dengan bahan-bahan alami.</p><p>Setiap helai butuh waktu berhari-hari. Itulah yang membuat batik tulis begitu istimewa.</p></div>
+        <div lang="en"><p>Abhati Studio is not a factory — it's a family home with a small courtyard full of plants. Here, a mother and her two daughters draw motifs with the canting and hot wax, then dye the cloth with natural materials.</p><p>Each cloth takes days of work. That is what makes hand-drawn batik so special.</p></div>
+      </div>
+    </div>
+    <div class="batikpanel reveal" aria-hidden="true"><span class="ph i18n"><span lang="id">[ foto studio batik ]</span><span lang="en">[ batik studio photo ]</span></span></div>
+  </div>
+</section>
+
+<section class="process" id="proses">
+  <div class="wrap">
+    <div class="section-head reveal"><p class="eyebrow i18n"><span lang="id">Dari kain putih ke batik</span><span lang="en">From white cloth to batik</span></p><h2 class="i18n"><span lang="id">Bagaimana batik tulis dibuat</span><span lang="en">How hand-drawn batik is made</span></h2></div>
+    <div class="steps reveal">
+      <div class="step"><div class="n"></div><h3 class="i18n"><span lang="id">Nyanting</span><span lang="en">Draw with wax</span></h3><p class="i18n"><span lang="id">Motif digambar di kain dengan lilin panas dan canting.</span><span lang="en">The motif is drawn on the cloth with hot wax and a canting.</span></p></div>
+      <div class="step"><div class="n"></div><h3 class="i18n"><span lang="id">Mewarnai</span><span lang="en">Dye</span></h3><p class="i18n"><span lang="id">Kain dicelup dengan pewarna alami, berulang kali.</span><span lang="en">The cloth is dipped in natural dyes, again and again.</span></p></div>
+      <div class="step"><div class="n"></div><h3 class="i18n"><span lang="id">Nglorod</span><span lang="en">Remove wax</span></h3><p class="i18n"><span lang="id">Lilin dilelehkan dengan air panas, motif pun muncul.</span><span lang="en">The wax is boiled off, and the motif appears.</span></p></div>
+      <div class="step"><div class="n"></div><h3 class="i18n"><span lang="id">Menjemur</span><span lang="en">Dry</span></h3><p class="i18n"><span lang="id">Kain dijemur di halaman hingga kering.</span><span lang="en">The cloth is dried in the courtyard.</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="class" id="kelas">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="badge i18n"><span lang="id">Pengalaman</span><span lang="en">Experience</span></span>
+      <h2 class="i18n"><span lang="id">Belajar membatik di halaman rumah kami</span><span lang="en">Learn batik in our courtyard</span></h2>
+      <p class="i18n"><span lang="id">Dalam kelas kecil, Anda mencoba canting sendiri, memilih warna alami, dan membawa pulang kain batik buatan tangan Anda. Ditemani teh dan keramahan keluarga.</span><span lang="en">In a small class, you try the canting yourself, choose natural colours, and take home your own hand-made batik. With tea and family hospitality.</span></p>
+      <div style="margin-top:1.4rem"><a class="btn btn-primary" href="#kontak"><span class="i18n"><span lang="id">Pesan kelas</span><span lang="en">Book a class</span></span></a></div>
+    </div>
+    <div class="art reveal" aria-hidden="true">
+      <svg width="200" height="150" viewBox="0 0 200 150" role="img" aria-label="Kain batik / Batik cloth">
+        <rect x="20" y="20" width="160" height="110" rx="6" fill="#1f3a5f"/>
+        <g fill="none" stroke="#c79a3e" stroke-width="2"><ellipse cx="60" cy="55" rx="14" ry="20"/><ellipse cx="60" cy="55" rx="20" ry="14"/><ellipse cx="120" cy="55" rx="14" ry="20"/><ellipse cx="120" cy="55" rx="20" ry="14"/><ellipse cx="90" cy="100" rx="14" ry="20"/><ellipse cx="90" cy="100" rx="20" ry="14"/><ellipse cx="150" cy="100" rx="14" ry="20"/><ellipse cx="150" cy="100" rx="20" ry="14"/></g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="galeri">
+  <div class="wrap">
+    <div class="section-head reveal"><p class="eyebrow i18n"><span lang="id">Galeri</span><span lang="en">Gallery</span></p><h2 class="i18n"><span lang="id">Kain batik kami</span><span lang="en">Our batik</span></h2></div>
+    <div class="grid-g reveal">
+      <figure class="tile2" tabindex="0" data-cap-id="Kain panjang" data-cap-en="Long cloths"><div class="fill" style="background:repeating-linear-gradient(45deg,#1f3a5f 0 16px,#7a4a24 16px 22px,#f0e7d3 22px 30px)"></div><span class="z">⤢</span><figcaption class="i18n"><span lang="id">Kain panjang</span><span lang="en">Long cloths</span></figcaption></figure>
+      <figure class="tile2" tabindex="0" data-cap-id="Selendang &amp; syal" data-cap-en="Scarves"><div class="fill" style="background:repeating-linear-gradient(135deg,#7a4a24 0 14px,#f0e7d3 14px 20px,#1f3a5f 20px 34px)"></div><span class="z">⤢</span><figcaption class="i18n"><span lang="id">Selendang &amp; syal</span><span lang="en">Scarves</span></figcaption></figure>
+      <figure class="tile2" tabindex="0" data-cap-id="Motif klasik" data-cap-en="Classic motifs"><div class="fill" style="background:radial-gradient(circle at 30% 30%,#2b4f7f,#14294a)"></div><span class="z">⤢</span><figcaption class="i18n"><span lang="id">Motif klasik</span><span lang="en">Classic motifs</span></figcaption></figure>
+      <figure class="tile2" tabindex="0" data-cap-id="Taplak &amp; dekorasi" data-cap-en="Table &amp; décor"><div class="fill" style="background:repeating-linear-gradient(90deg,#9a6636 0 16px,#f0e7d3 16px 22px,#1f3a5f 22px 34px)"></div><span class="z">⤢</span><figcaption class="i18n"><span lang="id">Taplak &amp; dekorasi</span><span lang="en">Table &amp; décor</span></figcaption></figure>
+      <figure class="tile2" tabindex="0" data-cap-id="Pakaian" data-cap-en="Clothing"><div class="fill" style="background:repeating-linear-gradient(45deg,#14294a 0 18px,#c79a3e 18px 24px,#14294a 24px 42px)"></div><span class="z">⤢</span><figcaption class="i18n"><span lang="id">Pakaian</span><span lang="en">Clothing</span></figcaption></figure>
+      <figure class="tile2" tabindex="0" data-cap-id="Sesuai pesanan" data-cap-en="Made to order"><div class="fill" style="background:repeating-linear-gradient(135deg,#1f3a5f 0 16px,#9a6636 16px 32px)"></div><span class="z">⤢</span><figcaption class="i18n"><span lang="id">Sesuai pesanan</span><span lang="en">Made to order</span></figcaption></figure>
+    </div>
+    <p class="note"><b>◆</b><span class="i18n"><span lang="id">Gambar ilustrasi. Kirimkan foto kain Anda dan kami tempatkan di sini.</span><span lang="en">Placeholder images. Send photos of your cloth and we'll place them here.</span></span></p>
+  </div>
+</section>
+
+<section class="visit" id="kontak">
+  <div class="wrap">
+    <div class="section-head reveal"><p class="eyebrow i18n"><span lang="id">Kontak</span><span lang="en">Contact</span></p><h2 class="i18n"><span lang="id">Mari mengobrol</span><span lang="en">Let's talk</span></h2></div>
+    <div class="cards reveal">
+      <div class="card">
+        <h3 class="i18n"><span lang="id">Lokasi</span><span lang="en">Location</span></h3>
+        <p class="big">Yogyakarta<br>Jawa, Indonesia</p>
+        <p class="i18n"><span lang="id">Studio rumah · kunjungan dengan janji</span><span lang="en">Home studio · visits by appointment</span></p>
+        <p><a href="https://www.google.com/maps/search/?api=1&query=batik+Yogyakarta" target="_blank" rel="noopener">→ <span class="i18n"><span lang="id">Buka peta</span><span lang="en">Open in maps</span></span></a></p>
+      </div>
+      <div class="card">
+        <h3 class="i18n"><span lang="id">Pesan &amp; kontak</span><span lang="en">Bookings &amp; contact</span></h3>
+        <p class="big i18n"><span lang="id">WhatsApp / Instagram<span class="tocheck">perlu dikonfirmasi</span></span><span lang="en">WhatsApp / Instagram<span class="tocheck">to confirm</span></span></p>
+        <p class="i18n"><span lang="id">Kontak masih perlu dikonfirmasi — lihat catatan usulan.</span><span lang="en">Contact details to be confirmed — see proposal notes.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand" style="display:block"><b>Abhati Studio</b><span class="sub">Batik · Yogyakarta · Indonesia</span></div>
+    <small class="i18n">
+      <span lang="id">Konsep situs web sebagai usulan untuk Abhati Studio. Bukan situs resmi dan belum ada afiliasi yang dikonfirmasi. Informasi kontak perlu dikonfirmasi.</span>
+      <span lang="en">Website concept as a proposal to Abhati Studio. Not the official site, no confirmed affiliation. Contact details to be confirmed.</span>
+    </small>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Gambar">
+  <button class="close" aria-label="Tutup" onclick="closeLb()">✕</button>
+  <figure><div class="fill" id="lbFill"></div><figcaption id="lbCap"></figcaption></figure>
+</div>
+
+<script>
+function setLang(l){document.documentElement.setAttribute('data-lang',l);document.documentElement.lang=l;
+  document.getElementById('id').setAttribute('aria-pressed',l==='id');document.getElementById('en').setAttribute('aria-pressed',l==='en');
+  try{localStorage.setItem('ab_lang',l);}catch(e){}}
+function toggleTheme(){var c=document.documentElement.getAttribute('data-theme');
+  var n=c==='dark'?'light':(c==='light'?'dark':(window.matchMedia('(prefers-color-scheme: dark)').matches?'light':'dark'));
+  document.documentElement.setAttribute('data-theme',n);try{localStorage.setItem('ab_theme',n);}catch(e){}}
+function openLb(fill,cap){document.getElementById('lbFill').style.cssText=fill;document.getElementById('lbCap').textContent=cap;document.getElementById('lightbox').classList.add('open');}
+function closeLb(){document.getElementById('lightbox').classList.remove('open');}
+(function(){
+  document.documentElement.classList.add('js');
+  try{var l=localStorage.getItem('ab_lang');if(l)setLang(l);var t=localStorage.getItem('ab_theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  var links=[].slice.call(document.querySelectorAll('.nav a')),map={};
+  links.forEach(function(a){var id=a.getAttribute('href').slice(1),s=document.getElementById(id);if(s)map[id]=a;});
+  var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.remove('active');});var a=map[e.target.id];if(a)a.classList.add('active');}});},{rootMargin:'-45% 0px -50% 0px'});
+  Object.keys(map).forEach(function(id){so.observe(document.getElementById(id));});
+  document.querySelectorAll('.tile2').forEach(function(t){
+    function open(){var fill=t.querySelector('.fill').getAttribute('style');var lang=document.documentElement.getAttribute('data-lang');openLb(fill,t.getAttribute('data-cap-'+lang)||'');}
+    t.addEventListener('click',open);t.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open();}});});
+  document.getElementById('lightbox').addEventListener('click',function(e){if(e.target===this)closeLb();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb();});
+})();
+</script>
+</body>
+</html>
