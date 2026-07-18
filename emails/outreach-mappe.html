@@ -1,0 +1,854 @@
+<!doctype html>
+<html lang="de" data-theme="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Outreach-Mappe · 20 versandfertige Mails</title>
+<style>
+:root{
+  --bg:#edefe9; --surface:#f8f9f4; --surface-2:#e6e9e0; --line:#d7dccf;
+  --ink:#23261f; --muted:#5c6357; --dim:#868c7c;
+  --accent:#1f6f6a; --accent-ink:#ffffff; --accent-soft:#dcebe9;
+  --warn:#9a6b16; --warn-soft:#f1e6cf; --ok:#3f7d4a;
+  --serif:"Iowan Old Style","Palatino Linotype","Book Antiqua",Palatino,"Hoefler Text",Georgia,serif;
+  --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  --wrap:52rem; --pad:clamp(1rem,4vw,2rem); --r:12px;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#15171a;--surface:#1d2024;--surface-2:#23272c;--line:#31363b;
+    --ink:#e9ece6;--muted:#a2a89c;--dim:#7c8378;
+    --accent:#54b3ab;--accent-ink:#08201e;--accent-soft:#173230;
+    --warn:#d6a552;--warn-soft:#33291a;--ok:#71b47f;}
+}
+:root[data-theme="dark"]{--bg:#15171a;--surface:#1d2024;--surface-2:#23272c;--line:#31363b;
+  --ink:#e9ece6;--muted:#a2a89c;--dim:#7c8378;--accent:#54b3ab;--accent-ink:#08201e;--accent-soft:#173230;
+  --warn:#d6a552;--warn-soft:#33291a;--ok:#71b47f;}
+:root[data-theme="light"]{--bg:#edefe9;--surface:#f8f9f4;--surface-2:#e6e9e0;--line:#d7dccf;
+  --ink:#23261f;--muted:#5c6357;--dim:#868c7c;--accent:#1f6f6a;--accent-ink:#ffffff;--accent-soft:#dcebe9;
+  --warn:#9a6b16;--warn-soft:#f1e6cf;--ok:#3f7d4a;}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{width:100%;max-width:var(--wrap);margin-inline:auto;padding-inline:var(--pad)}
+h1,h2{font-family:var(--serif);font-weight:600;margin:0;line-height:1.2;text-wrap:balance}
+a{color:var(--accent)}
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 92%,transparent);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .bar{display:flex;align-items:center;gap:.8rem;padding-block:.7rem;min-height:56px}
+.top b{font-family:var(--serif);font-size:1.05rem;font-weight:600;margin-right:auto}
+.themebtn{font:inherit;font-size:.9rem;background:transparent;border:1px solid var(--line);
+  border-radius:999px;width:2.2rem;height:2.2rem;cursor:pointer;color:var(--ink)}
+.intro{padding-block:1.6rem 1rem}
+.intro h1{font-size:clamp(1.5rem,1.2rem+1.6vw,2.1rem)}
+.intro p{color:var(--muted);margin:.7rem 0 0;max-width:44ch}
+.callout{margin-top:1.1rem;background:var(--warn-soft);border:1px solid color-mix(in srgb,var(--warn) 40%,var(--line));
+  border-radius:var(--r);padding:.9rem 1rem;font-size:.9rem;color:var(--ink)}
+.callout b{color:var(--warn)}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem;font-size:.8rem;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:.35rem}
+.dot{width:.7rem;height:.7rem;border-radius:50%;display:inline-block}
+.dot.ok{background:var(--ok)}.dot.warn{background:var(--warn)}
+
+.index{display:flex;flex-wrap:wrap;gap:.4rem;padding-block:.8rem 1.4rem}
+.index a{font-size:.82rem;text-decoration:none;color:var(--muted);border:1px solid var(--line);
+  background:var(--surface);border-radius:999px;padding:.25rem .6rem}
+.index a:hover{color:var(--ink);border-color:var(--accent)}
+
+.firm{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  padding:clamp(1rem,3vw,1.5rem);margin-bottom:1.2rem;scroll-margin-top:70px}
+.fh{display:flex;gap:.9rem;align-items:flex-start;flex-wrap:wrap}
+.num{font-family:var(--serif);font-size:.85rem;font-weight:700;color:var(--accent-ink);
+  background:var(--accent);border-radius:7px;min-width:2rem;height:2rem;display:grid;place-items:center;
+  font-variant-numeric:tabular-nums;flex:none}
+.fh h2{font-size:1.25rem}
+.craft{color:var(--muted);font-size:.85rem;margin:.15rem 0 0}
+.fh-main{flex:1 1 12rem}
+.live{font-size:.82rem;text-decoration:none;font-weight:600;border:1px solid var(--accent);
+  color:var(--accent);border-radius:999px;padding:.35rem .7rem;white-space:nowrap;align-self:center}
+.live:hover{background:var(--accent);color:var(--accent-ink)}
+
+.channels{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1rem}
+.chip{display:inline-flex;align-items:center;gap:.35rem;font-size:.82rem;text-decoration:none;
+  color:var(--ink);background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:.35rem .6rem}
+a.chip:hover{border-color:var(--accent);color:var(--accent)}
+.chip.warn{background:var(--warn-soft);border-color:color-mix(in srgb,var(--warn) 35%,var(--line));color:var(--warn)}
+.chip .k{color:var(--dim);font-weight:600;text-transform:uppercase;font-size:.66rem;letter-spacing:.05em}
+
+.mail{margin-top:1.1rem;border-top:1px dashed var(--line);padding-top:1rem}
+.mrow{display:flex;align-items:center;gap:.6rem;margin-bottom:.4rem}
+.lbl{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);font-weight:700;margin-right:auto}
+.copy{font:inherit;font-size:.76rem;font-weight:600;cursor:pointer;border:1px solid var(--line);
+  background:var(--surface-2);color:var(--ink);border-radius:7px;padding:.28rem .6rem;white-space:nowrap}
+.copy:hover{border-color:var(--accent);color:var(--accent)}
+.copy.done{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.subj{font-weight:600;background:var(--surface-2);border:1px solid var(--line);border-radius:8px;
+  padding:.6rem .8rem;margin:0}
+.body{white-space:pre-line;background:var(--surface-2);border:1px solid var(--line);border-radius:8px;
+  padding:.8rem .9rem;margin:.2rem 0 0;font-size:.95rem;line-height:1.7;overflow-wrap:anywhere}
+details{margin-top:.8rem}
+summary{cursor:pointer;font-size:.82rem;color:var(--muted);font-weight:600}
+summary:hover{color:var(--accent)}
+details .subj,details .body{margin-top:.5rem}
+:focus-visible{outline:2.5px solid var(--accent);outline-offset:2px}
+footer{color:var(--dim);font-size:.8rem;text-align:center;padding-block:2rem 3rem}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap bar">
+    <b>Outreach-Mappe</b>
+    <button class="themebtn" aria-label="Hell/Dunkel" onclick="tt()">◐</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="intro">
+    <h1>20 versandfertige Mails</h1>
+    <p>Pro Firma: die besten Kontaktkanäle, ein Betreff und der fertige Text zum Kopieren. Absender überall vorausgefüllt mit <b>Robin</b> / <b>robinhumberg@gmx.de</b> — überall frei anpassbar.</p>
+    <div class="callout"><b>Vor dem Senden:</b> Kontaktdaten stammen aus öffentlicher Recherche — bitte kurz bestätigen. In der <b>EU (Portugal, Griechenland)</b> ist unaufgeforderte Werbe-Mail heikel: 1:1 senden, persönlich, mit dem Opt-out-Satz am Ende. Verantwortung & Versand liegen bei dir.</div>
+    <div class="legend">
+      <span><span class="dot ok"></span> Kontakt gut erreichbar</span>
+      <span><span class="dot warn"></span> Kanal noch bestätigen</span>
+    </div>
+  </section>
+
+  <nav class="index" aria-label="Zu Firma springen">
+    <a href="#f01">01</a><a href="#f02">02</a><a href="#f03">03</a><a href="#f04">04</a><a href="#f05">05</a>
+    <a href="#f06">06</a><a href="#f07">07</a><a href="#f08">08</a><a href="#f09">09</a><a href="#f10">10</a>
+    <a href="#f11">11</a><a href="#f12">12</a><a href="#f13">13</a><a href="#f14">14</a><a href="#f15">15</a>
+    <a href="#f16">16</a><a href="#f17">17</a><a href="#f18">18</a><a href="#f19">19</a><a href="#f20">20</a>
+  </nav>
+
+  <!-- 01 -->
+  <article class="firm" id="f01">
+    <div class="fh"><span class="num">01</span>
+      <div class="fh-main"><h2>Olaria Patalim 🇵🇹</h2><p class="craft">Töpferei · São Pedro do Corval · Portugiesisch</p></div>
+      <a class="live" href="https://clappedbytxger.github.io/GitHubTimoRobin/olaria-patalim/" target="_blank" rel="noopener">Website ↗</a>
+    </div>
+    <div class="channels">
+      <a class="chip" href="tel:+351967573883"><span class="k">Tel</span> +351 967 573 883</a>
+      <span class="chip warn"><span class="k">FB/IG</span> „Olaria Patalim" suchen &amp; DM</span>
+      <span class="chip warn"><span class="k">E-Mail</span> keine bestätigt → anrufen</span>
+    </div>
+    <div class="mail">
+      <div class="mrow"><span class="lbl">Betreff</span><button class="copy" data-copy="Fiz um site para a Olaria Patalim — queria mostrar-vos">Kopieren</button></div>
+      <p class="subj">Fiz um site para a Olaria Patalim — queria mostrar-vos</p>
+      <div class="mrow"><span class="lbl">Nachricht · Portugiesisch</span><button class="copy" data-tgt="b01">Text kopieren</button></div>
+      <div class="body" id="b01">Olá Nélia e Rui,
+
+Chamo-me Robin e desenho páginas web para pequenos negócios com muita história.
+
+Fiquei a saber que a Olaria Patalim é a olaria mais antiga de São Pedro do Corval — cerca de 160 anos de barro, e a “escola” de tantas outras olarias da aldeia. Achei pena que uma história tão bonita ainda não tivesse uma página própria: online encontram-vos só em diretórios.
+
+Por isso, em vez de vos pedir nada, fiz-vos uma proposta de website — já pronta a ver:
+
+👉 https://clappedbytxger.github.io/GitHubTimoRobin/olaria-patalim/
+
+É só um conceito (dá para mudar tudo — textos, cores, fotografias). Se gostarem, respondam a esta mensagem e avançamos; se não fizer sentido, ignorem à vontade, sem qualquer compromisso.
+
+Um abraço do Alentejo,
+Robin
+robinhumberg@gmx.de
+
+Se preferirem não receber mais mensagens minhas, é só dizer.</div>
+    </div>
+  </article>
+
+  <!-- 02 -->
+  <article class="firm" id="f02">
+    <div class="fh"><span class="num">02</span>
+      <div class="fh-main"><h2>Olaria Ramalho 🇵🇹</h2><p class="craft">Schwarzkeramik (UNESCO) · Bisalhães · Portugiesisch</p></div>
+      <a class="live" href="https://clappedbytxger.github.io/GitHubTimoRobin/olaria-ramalho/" target="_blank" rel="noopener">Website ↗</a>
+    </div>
+    <div class="channels">
+      <a class="chip" href="mailto:olariajorgeramalho@gmail.com"><span class="k">E-Mail</span> olariajorgeramalho@gmail.com</a>
+      <a class="chip" href="https://www.facebook.com/olarianegradebisalhaes/" target="_blank" rel="noopener"><span class="k">FB</span> olarianegradebisalhaes</a>
+      <a class="chip" href="tel:+351936018613"><span class="k">Tel</span> +351 936 018 613</a>
+    </div>
+    <div class="mail">
+      <div class="mrow"><span class="lbl">Betreff</span><button class="copy" data-copy="Fiz um site para a olaria negra do Jorge Ramalho">Kopieren</button></div>
+      <p class="subj">Fiz um site para a olaria negra do Jorge Ramalho</p>
+      <div class="mrow"><span class="lbl">Nachricht · Portugiesisch</span><button class="copy" data-tgt="b02">Text kopieren</button></div>
+      <div class="body" id="b02">Olá Jorge,
+
+Chamo-me Robin e faço páginas web para artesãos e pequenos negócios.
+
+Fiquei fascinado com a olaria negra de Bisalhães — um saber reconhecido pela UNESCO e que hoje resta em pouquíssimas mãos, incluindo as suas. Achei uma pena que uma tradição tão rara só apareça online numa página de Facebook.
+
+Por isso fiz-lhe uma proposta de website, já pronta a ver — pensada para mostrar as peças e a história do ofício a colecionadores, museus e visitantes:
+
+👉 https://clappedbytxger.github.io/GitHubTimoRobin/olaria-ramalho/
+
+É apenas um conceito: textos, cores e fotografias podem mudar à vontade. Se gostar, responda a esta mensagem e avançamos; se não fizer sentido, ignore sem problema.
+
+Um abraço,
+Robin
+robinhumberg@gmx.de
+
+Se preferir não receber mais mensagens minhas, basta dizer.</div>
+    </div>
+  </article>
+
+  <!-- 03 -->
+  <article class="firm" id="f03">
+    <div class="fh"><span class="num">03</span>
+      <div class="fh-main"><h2>Artesanato Zezinha 🇵🇹</h2><p class="craft">Bemalte Möbel · Redondo · Portugiesisch</p></div>
+      <a class="live" href="https://clappedbytxger.github.io/GitHubTimoRobin/artesanato-zezinha/" target="_blank" rel="noopener">Website ↗</a>
+    </div>
+    <div class="channels">
+      <a class="chip" href="https://www.instagram.com/artesanatozezinha_/" target="_blank" rel="noopener"><span class="k">IG</span> @artesanatozezinha_</a>
+      <a class="chip" href="https://www.facebook.com/artesanatozezinha/" target="_blank" rel="noopener"><span class="k">FB</span> artesanatozezinha</a>
+      <span class="chip warn"><span class="k">E-Mail</span> zezinhaartesanato@gmail.com (prüfen)</span>
+    </div>
+    <div class="mail">
+      <div class="mrow"><span class="lbl">Betreff</span><button class="copy" data-copy="Fiz um site para a oficina Zezinha — as vossas cores online">Kopieren</button></div>
+      <p class="subj">Fiz um site para a oficina Zezinha — as vossas cores online</p>
+      <div class="mrow"><span class="lbl">Nachricht · Portugiesisch</span><button class="copy" data-tgt="b03">Text kopieren</button></div>
+      <div class="body" id="b03">Olá,
+
+Chamo-me Robin e desenho páginas web para artesãos.
+
+Descobri a vossa oficina em Redondo e apaixonei-me pelos móveis pintados à mão — as flores e as cores são lindas. Achei pena que um trabalho tão especial se veja tão pouco online.
+
+Por isso fiz-vos uma proposta de website, já pronta a ver, feita para mostrar as cores e as peças a quem adora artesanato e decoração:
+
+👉 https://clappedbytxger.github.io/GitHubTimoRobin/artesanato-zezinha/
+
+É só um conceito — textos, cores e fotografias mudam à vontade. Se gostarem, respondam e avançamos; se não fizer sentido, ignorem sem compromisso.
+
+Um abraço do Alentejo,
+Robin
+robinhumberg@gmx.de
+
+Se preferirem não receber mais mensagens, é só dizer.</div>
+    </div>
+  </article>
+
+  <!-- 04 -->
+  <article class="firm" id="f04">
+    <div class="fh"><span class="num">04</span>
+      <div class="fh-main"><h2>Taverna Rodamanthis 🇬🇷</h2><p class="craft">Familien-Taverne · Mochos, Kreta · Griechisch</p></div>
+      <a class="live" href="https://clappedbytxger.github.io/GitHubTimoRobin/taverna-rodamanthis/" target="_blank" rel="noopener">Website ↗</a>
+    </div>
+    <div class="channels">
+      <a class="chip" href="tel:+306974315062"><span class="k">Tel</span> +30 697 431 5062</a>
+      <a class="chip warn" href="https://www.facebook.com/TavernaGrillHouseRodamanthis/" target="_blank" rel="noopener"><span class="k">FB</span> Grill House Rodamanthis (prüfen)</a>
+    </div>
+    <div class="mail">
+      <div class="mrow"><span class="lbl">Betreff</span><button class="copy" data-copy="Έφτιαξα έναν ιστότοπο για την ταβέρνα Ροδαμάνθης">Kopieren</button></div>
+      <p class="subj">Έφτιαξα έναν ιστότοπο για την ταβέρνα Ροδαμάνθης</p>
+      <div class="mrow"><span class="lbl">Nachricht · Griechisch</span><button class="copy" data-tgt="b04">Text kopieren</button></div>
+      <div class="body" id="b04">Γεια σας,
+
+Ονομάζομαι Robin και φτιάχνω ιστοσελίδες για μικρές οικογενειακές επιχειρήσεις.
+
+Έμαθα για την ταβέρνα σας στον Μοχό — για τη φιλοξενία σας και την κρητική βραδιά με τον χορό κάθε Τετάρτη. Μου φάνηκε κρίμα που όποιος σας ψάχνει online βρίσκει μόνο κριτικές, χωρίς δικό σας ιστότοπο με το μενού και τις ώρες σας.
+
+Γι' αυτό σας έφτιαξα μια πρόταση ιστότοπου, έτοιμη να τη δείτε:
+
+👉 https://clappedbytxger.github.io/GitHubTimoRobin/taverna-rodamanthis/
+
+Είναι απλώς μια ιδέα — κείμενα, χρώματα και φωτογραφίες αλλάζουν εύκολα. Αν σας αρέσει, απαντήστε και συνεχίζουμε· αν δεν σας ενδιαφέρει, αγνοήστε το ελεύθερα.
+
+Με εκτίμηση,
+Robin
+robinhumberg@gmx.de
+
+Αν δεν θέλετε να λαμβάνετε άλλα μηνύματα, απλώς πείτε το.</div>
+    </div>
+  </article>
+
+  <!-- 05 -->
+  <article class="firm" id="f05">
+    <div class="fh"><span class="num">05</span>
+      <div class="fh-main"><h2>Art D'Argile 🇲🇦</h2><p class="craft">Töpferei &amp; Zellige · Fès · Französisch</p></div>
+      <a class="live" href="https://clappedbytxger.github.io/GitHubTimoRobin/art-dargile/" target="_blank" rel="noopener">Website ↗</a>
+    </div>
+    <div class="channels">
+      <a class="chip" href="tel:+212662348754"><span class="k">Tel/WhatsApp</span> +212 662 348754</a>
+      <span class="chip warn"><span class="k">E-Mail/Social</span> keine bestätigt → WhatsApp/vor Ort</span>
+    </div>
+    <div class="mail">
+      <div class="mrow"><span class="lbl">Betreff</span><button class="copy" data-copy="J'ai créé un site web pour Art D'Argile">Kopieren</button></div>
+      <p class="subj">J'ai créé un site web pour Art D'Argile</p>
+      <div class="mrow"><span class="lbl">Nachricht · Französisch</span><button class="copy" data-tgt="b05">Text kopieren</button></div>
+      <div class="body" id="b05">Bonjour,
+
+Je m'appelle Robin et je conçois des sites web pour les artisans.
+
+J'admire le travail de poterie et de zellige de Fès, et j'ai remarqué qu'Art D'Argile n'a pas encore de site web — alors que d'autres ateliers d'Aïn Nokbi en ont un. C'est dommage, car les architectes et les acheteurs à l'étranger cherchent ce savoir-faire en ligne.
+
+J'ai donc préparé pour vous une proposition de site web, déjà prête à voir :
+
+👉 https://clappedbytxger.github.io/GitHubTimoRobin/art-dargile/
+
+Ce n'est qu'un concept : textes, couleurs et photos peuvent changer. Si cela vous plaît, répondez et nous continuons ; sinon, ignorez ce message, sans aucune obligation.
+
+Cordialement,
+Robin
+robinhumberg@gmx.de
+
+Si vous ne souhaitez plus recevoir de messages, dites-le simplement.</div>
+    </div>
+  </article>
+
+  <!-- 06 -->
+  <article class="firm" id="f06">
+    <div class="fh"><span class="num">06</span>
+      <div class="fh-main"><h2>Barro Negro 🇲🇽</h2><p class="craft">Schwarzkeramik · San Bartolo Coyotepec · Spanisch</p></div>
+      <a class="live" href="https://clappedbytxger.github.io/GitHubTimoRobin/barro-negro-coyotepec/" target="_blank" rel="noopener">Website ↗</a>
+    </div>
+    <div class="channels">
+      <a class="chip" href="mailto:carlomagno2005@hotmail.com"><span class="k">E-Mail</span> carlomagno2005@hotmail.com</a>
+      <a class="chip" href="tel:+529511711219"><span class="k">Tel Carlomagno</span> +52 951 171 1219</a>
+      <a class="chip" href="tel:+529511563726"><span class="k">Tel Ivett</span> +52 951 156 3726</a>
+    </div>
+    <div class="mail">
+      <div class="mrow"><span class="lbl">Betreff</span><button class="copy" data-copy="Les hice un sitio web para su barro negro">Kopieren</button></div>
+      <p class="subj">Les hice un sitio web para su barro negro</p>
+      <div class="mrow"><span class="lbl">Nachricht · Spanisch</span><button class="copy" data-tgt="b06">Text kopieren</button></div>
+      <div class="body" id="b06">Hola,
+
+Me llamo Robin y hago sitios web para artesanos.
+
+Admiro el barro negro de San Bartolo Coyotepec y me pareció una lástima que su taller no tenga todavía un sitio web propio — quien busca en internet solo encuentra directorios. Los coleccionistas y compradores de otros países buscan justamente este trabajo en línea.
+
+Por eso les preparé una propuesta de sitio web, ya lista para ver — pensada para mostrar sus piezas y recibir pedidos y envíos:
+
+👉 https://clappedbytxger.github.io/GitHubTimoRobin/barro-negro-coyotepec/
+
+Es solo un concepto: textos, colores y fotos se pueden cambiar. Si les gusta, respondan y seguimos; si no, ignoren este mensaje sin ningún compromiso.
+
+Un saludo,
+Robin
+robinhumberg@gmx.de
+
+Si prefieren no recibir más mensajes, solo díganlo.</div>
+    </div>
+  </article>
+
+  <!-- 07 -->
+  <article class="firm" id="f07">
+    <div class="fh"><span class="num">07</span>
+      <div class="fh-main"><h2>Balbina Navarro 🇲🇽</h2><p class="craft">Rückengurt-Weberei · Santo Tomás Jalieza · Spanisch</p></div>
+      <a class="live" href="https://clappedbytxger.github.io/GitHubTimoRobin/balbina-navarro/" target="_blank" rel="noopener">Website ↗</a>
+    </div>
+    <div class="channels">
+      <a class="chip" href="mailto:balbinanavarro.textil@gmail.com"><span class="k">E-Mail</span> balbinanavarro.textil@gmail.com</a>
+      <a class="chip" href="https://www.instagram.com/balbina_navarro_textil/" target="_blank" rel="noopener"><span class="k">IG</span> @balbina_navarro_textil</a>
+    </div>
+    <div class="mail">
+      <div class="mrow"><span class="lbl">Betreff</span><button class="copy" data-copy="Le hice un sitio web para sus tejidos, Balbina">Kopieren</button></div>
+      <p class="subj">Le hice un sitio web para sus tejidos, Balbina</p>
+      <div class="mrow"><span class="lbl">Nachricht · Spanisch</span><button class="copy" data-tgt="b07">Text kopieren</button></div>
+      <div class="body" id="b07">Hola Balbina,
+
+Me llamo Robin y hago sitios web para artesanas y artesanos.
+
+Vi su trabajo en telar de cintura y me encantó — los tintes naturales y las figuras zapotecas son hermosos. Me pareció una lástima que solo se le pueda encontrar en Instagram: una página propia da más confianza a boutiques y compradores de otros países.
+
+Por eso le preparé una propuesta de sitio web, ya lista para ver — pensada para mostrar sus tejidos y recibir pedidos directos, sin intermediarios:
+
+👉 https://clappedbytxger.github.io/GitHubTimoRobin/balbina-navarro/
+
+Es solo un concepto: textos, colores y fotos se pueden cambiar. Si le gusta, responda y seguimos; si no, ignore este mensaje sin ningún compromiso.
+
+Un saludo,
+Robin
+robinhumberg@gmx.de
+
+Si prefiere no recibir más mensajes, solo dígamelo.</div>
+    </div>
+  </article>
+
+  <!-- 08 -->
+  <article class="firm" id="f08">
+    <div class="fh"><span class="num">08</span>
+      <div class="fh-main"><h2>Tiếng Vọng Phố 🇻🇳</h2><p class="craft">Seidenlaternen · Hội An · Vietnamesisch</p></div>
+      <a class="live" href="https://clappedbytxger.github.io/GitHubTimoRobin/tieng-vong-pho/" target="_blank" rel="noopener">Website ↗</a>
+    </div>
+    <div class="channels">
+      <a class="chip" href="mailto:hoianhandicrafttours@gmail.com"><span class="k">E-Mail</span> hoianhandicrafttours@gmail.com</a>
+      <a class="chip" href="https://www.facebook.com/lanternmakingclass/" target="_blank" rel="noopener"><span class="k">FB</span> lanternmakingclass</a>
+      <a class="chip" href="tel:+84399216230"><span class="k">Tel</span> +84 39 921 6230</a>
+    </div>
+    <div class="mail">
+      <div class="mrow"><span class="lbl">Betreff</span><button class="copy" data-copy="Tôi đã làm một website cho Tiếng Vọng Phố">Kopieren</button></div>
+      <p class="subj">Tôi đã làm một website cho Tiếng Vọng Phố</p>
+      <div class="mrow"><span class="lbl">Nachricht · Vietnamesisch</span><button class="copy" data-tgt="b08">Text kopieren</button></div>
+      <div class="body" id="b08">Xin chào,
+
+Tôi tên là Robin, tôi làm website cho các nghề thủ công.
+
+Tôi rất thích đèn lồng lụa Hội An của xưởng mình, và thấy tiếc là hiện tại chỉ có thể tìm thấy xưởng qua Facebook. Khách du lịch thường tìm “Hoi An lantern” trên Google — một trang web riêng sẽ giúp họ tìm thấy và đặt lớp học hoặc đặt hàng dễ hơn.
+
+Vì vậy tôi đã làm sẵn một đề xuất website, đã có thể xem ngay:
+
+👉 https://clappedbytxger.github.io/GitHubTimoRobin/tieng-vong-pho/
+
+Đây chỉ là bản ý tưởng — chữ, màu và hình ảnh đều có thể thay đổi. Nếu anh/chị thích, chỉ cần trả lời tin nhắn này; nếu không phù hợp, cứ bỏ qua, hoàn toàn không bắt buộc.
+
+Trân trọng,
+Robin
+robinhumberg@gmx.de
+
+Nếu không muốn nhận thêm tin nhắn, chỉ cần cho tôi biết.</div>
+    </div>
+  </article>
+
+  <!-- 09 -->
+  <article class="firm" id="f09">
+    <div class="fh"><span class="num">09</span>
+      <div class="fh-main"><h2>Ha Linh 🇻🇳</h2><p class="craft">Laternen seit 1999 · Hội An · Vietnamesisch</p></div>
+      <a class="live" href="https://clappedbytxger.github.io/GitHubTimoRobin/ha-linh-lanterns/" target="_blank" rel="noopener">Website ↗</a>
+    </div>
+    <div class="channels">
+      <a class="chip" href="tel:+84510910201"><span class="k">Tel Xưởng</span> +84 510 910201</a>
+      <a class="chip" href="tel:+84935360197"><span class="k">Tel Shop</span> +84 935 360197</a>
+      <span class="chip warn"><span class="k">Online</span> TripAdvisor „Ha Linh Lantern"</span>
+    </div>
+    <div class="mail">
+      <div class="mrow"><span class="lbl">Betreff</span><button class="copy" data-copy="Tôi đã làm một website cho xưởng đèn lồng Ha Linh">Kopieren</button></div>
+      <p class="subj">Tôi đã làm một website cho xưởng đèn lồng Ha Linh</p>
+      <div class="mrow"><span class="lbl">Nachricht · Vietnamesisch</span><button class="copy" data-tgt="b09">Text kopieren</button></div>
+      <div class="body" id="b09">Xin chào,
+
+Tôi tên là Robin, tôi làm website cho các nghề thủ công.
+
+Tôi biết xưởng Ha Linh đã làm đèn lồng từ năm 1999. Thật tiếc là khách hàng và người mua sỉ ở nước ngoài tìm “Hoi An lantern” lại khó tìm thấy xưởng mình — một trang web riêng sẽ giúp nhận đơn bán sỉ dễ hơn.
+
+Vì vậy tôi đã làm sẵn một đề xuất website, có thể xem ngay:
+
+👉 https://clappedbytxger.github.io/GitHubTimoRobin/ha-linh-lanterns/
+
+Đây chỉ là bản ý tưởng — chữ, màu và hình đều có thể thay đổi. Nếu anh/chị thích, chỉ cần trả lời; nếu không, cứ bỏ qua, hoàn toàn không bắt buộc.
+
+Trân trọng,
+Robin
+robinhumberg@gmx.de
+
+Nếu không muốn nhận thêm tin nhắn, chỉ cần cho tôi biết.</div>
+    </div>
+  </article>
+
+  <!-- 10 -->
+  <article class="firm" id="f10">
+    <div class="fh"><span class="num">10</span>
+      <div class="fh-main"><h2>Block Print House · Deepak Chhipa 🇮🇳</h2><p class="craft">Hand-Blockdruck · Bagru · Englisch</p></div>
+      <a class="live" href="https://clappedbytxger.github.io/GitHubTimoRobin/deepak-chhipa-bagru/" target="_blank" rel="noopener">Website ↗</a>
+    </div>
+    <div class="channels">
+      <a class="chip" href="mailto:deepakchhipa789@gmail.com"><span class="k">E-Mail</span> deepakchhipa789@gmail.com</a>
+      <a class="chip" href="https://wa.me/919887218935" target="_blank" rel="noopener"><span class="k">WhatsApp</span> +91 98872 18935</a>
+      <a class="chip" href="https://www.instagram.com/blockprinthouse/" target="_blank" rel="noopener"><span class="k">IG</span> @blockprinthouse</a>
+    </div>
+    <div class="mail">
+      <div class="mrow"><span class="lbl">Betreff</span><button class="copy" data-copy="I built a website for Block Print House">Kopieren</button></div>
+      <p class="subj">I built a website for Block Print House</p>
+      <div class="mrow"><span class="lbl">Nachricht · Englisch</span><button class="copy" data-tgt="b10">Text kopieren</button></div>
+      <div class="body" id="b10">Hi Deepak,
+
+My name is Robin and I build websites for artisans.
+
+I love your Bagru block printing — the natural dyes and dabu work are beautiful. It felt a shame you can mainly be found on Instagram: your own website gives boutiques and designers abroad the confidence to place wholesale orders.
+
+So I built you a website proposal, ready to view — made to show your fabrics and receive wholesale/export enquiries:
+
+👉 https://clappedbytxger.github.io/GitHubTimoRobin/deepak-chhipa-bagru/
+
+It's just a concept — text, colours and photos can all change. If you like it, simply reply; if not, feel free to ignore this, no obligation.
+
+Best regards,
+Robin
+robinhumberg@gmx.de
+
+If you'd rather not receive further messages, just let me know.</div>
+    </div>
+  </article>
+
+  <!-- 11 -->
+  <article class="firm" id="f11">
+    <div class="fh"><span class="num">11</span>
+      <div class="fh-main"><h2>Wood Carver Pande Family 🇮🇩</h2><p class="craft">Holzschnitzerei · Mas, Bali · Indonesisch</p></div>
+      <a class="live" href="https://clappedbytxger.github.io/GitHubTimoRobin/pande-woodcarving/" target="_blank" rel="noopener">Website ↗</a>
+    </div>
+    <div class="channels">
+      <a class="chip" href="https://www.facebook.com/Woodcarverpandefamily1125/" target="_blank" rel="noopener"><span class="k">FB</span> Woodcarverpandefamily1125</a>
+      <span class="chip warn"><span class="k">E-Mail</span> keine bestätigt → FB-DM/TripAdvisor</span>
+    </div>
+    <div class="mail">
+      <div class="mrow"><span class="lbl">Betreff</span><button class="copy" data-copy="Saya membuat situs web untuk sanggar ukir keluarga Anda">Kopieren</button></div>
+      <p class="subj">Saya membuat situs web untuk sanggar ukir keluarga Anda</p>
+      <div class="mrow"><span class="lbl">Nachricht · Indonesisch</span><button class="copy" data-tgt="b11">Text kopieren</button></div>
+      <div class="body" id="b11">Halo,
+
+Nama saya Robin, saya membuat situs web untuk pengrajin.
+
+Saya mengagumi ukiran kayu keluarga Pande di Desa Mas, dan sayang sekali sanggar Anda belum punya situs web sendiri — wisatawan yang mencari kelas ukir di Ubud hanya menemukan sanggar besar, bukan sanggar keluarga seperti Anda.
+
+Karena itu saya sudah membuatkan usulan situs web, siap dilihat:
+
+👉 https://clappedbytxger.github.io/GitHubTimoRobin/pande-woodcarving/
+
+Ini hanya konsep — teks, warna, dan foto bisa diubah. Jika Anda suka, cukup balas pesan ini; jika tidak cocok, abaikan saja, tanpa kewajiban apa pun.
+
+Salam,
+Robin
+robinhumberg@gmx.de
+
+Jika tidak ingin menerima pesan lagi, beri tahu saya saja.</div>
+    </div>
+  </article>
+
+  <!-- 12 -->
+  <article class="firm" id="f12">
+    <div class="fh"><span class="num">12</span>
+      <div class="fh-main"><h2>Asociación Lema 🇬🇹</h2><p class="craft">Frauen-Weberei · San Juan La Laguna · Spanisch</p></div>
+      <a class="live" href="https://clappedbytxger.github.io/GitHubTimoRobin/lema-weaving/" target="_blank" rel="noopener">Website ↗</a>
+    </div>
+    <div class="channels">
+      <a class="chip" href="https://wa.me/50254378453" target="_blank" rel="noopener"><span class="k">WhatsApp</span> +502 5437 8453</a>
+      <a class="chip" href="https://www.instagram.com/textiles.lema/" target="_blank" rel="noopener"><span class="k">IG</span> @textiles.lema</a>
+    </div>
+    <div class="mail">
+      <div class="mrow"><span class="lbl">Betreff</span><button class="copy" data-copy="Les hice un sitio web para la cooperativa Lema">Kopieren</button></div>
+      <p class="subj">Les hice un sitio web para la cooperativa Lema</p>
+      <div class="mrow"><span class="lbl">Nachricht · Spanisch</span><button class="copy" data-tgt="b12">Text kopieren</button></div>
+      <div class="body" id="b12">Hola,
+
+Me llamo Robin y hago sitios web para artesanas.
+
+Conocí el trabajo de la cooperativa Lema en San Juan La Laguna y me pareció admirable — los tintes naturales, los colores y sobre todo la historia de las mujeres. Me dio pena que solo se les pueda encontrar en redes: una página propia da más confianza a tiendas y compradores del extranjero.
+
+Por eso les preparé una propuesta de sitio web, ya lista para ver, pensada para mostrar sus tejidos y recibir pedidos directos:
+
+👉 https://clappedbytxger.github.io/GitHubTimoRobin/lema-weaving/
+
+Es solo un concepto: textos, colores y fotos se pueden cambiar. Si les gusta, respondan y seguimos; si no, ignoren este mensaje sin ningún compromiso.
+
+Un saludo,
+Robin
+robinhumberg@gmx.de
+
+Si prefieren no recibir más mensajes, solo díganlo.</div>
+    </div>
+  </article>
+
+  <!-- 13 -->
+  <article class="firm" id="f13">
+    <div class="fh"><span class="num">13</span>
+      <div class="fh-main"><h2>Abhati Studio 🇮🇩</h2><p class="craft">Batik (Naturfarben) · Yogyakarta · Indonesisch</p></div>
+      <a class="live" href="https://clappedbytxger.github.io/GitHubTimoRobin/abhati-batik/" target="_blank" rel="noopener">Website ↗</a>
+    </div>
+    <div class="channels">
+      <a class="chip" href="https://www.instagram.com/abhati_studio/" target="_blank" rel="noopener"><span class="k">IG</span> @abhati_studio</a>
+      <a class="chip" href="https://www.facebook.com/abhati.studio/" target="_blank" rel="noopener"><span class="k">FB</span> abhati.studio</a>
+      <a class="chip" href="https://www.etsy.com/shop/AbhatiStudio" target="_blank" rel="noopener"><span class="k">Etsy</span> AbhatiStudio</a>
+    </div>
+    <div class="mail">
+      <div class="mrow"><span class="lbl">Betreff</span><button class="copy" data-copy="Saya membuat situs web untuk Abhati Studio">Kopieren</button></div>
+      <p class="subj">Saya membuat situs web untuk Abhati Studio</p>
+      <div class="mrow"><span class="lbl">Nachricht · Indonesisch</span><button class="copy" data-tgt="b13">Text kopieren</button></div>
+      <div class="body" id="b13">Halo,
+
+Nama saya Robin, saya membuat situs web untuk pengrajin.
+
+Saya suka sekali batik tulis pewarna alam dari studio keluarga Anda di Yogyakarta. Sayang, wisatawan yang mencari “batik class Yogyakarta” hanya menemukan pabrik besar — bukan studio rumah yang hangat seperti milik Anda.
+
+Karena itu saya sudah membuatkan usulan situs web, siap dilihat:
+
+👉 https://clappedbytxger.github.io/GitHubTimoRobin/abhati-batik/
+
+Ini hanya konsep — teks, warna, dan foto bisa diubah. Jika Anda suka, cukup balas pesan ini; jika tidak cocok, abaikan saja, tanpa kewajiban.
+
+Salam,
+Robin
+robinhumberg@gmx.de
+
+Jika tidak ingin menerima pesan lagi, beri tahu saya saja.</div>
+    </div>
+  </article>
+
+  <!-- 14 -->
+  <article class="firm" id="f14">
+    <div class="fh"><span class="num">14</span>
+      <div class="fh-main"><h2>Tentmakers of Cairo 🇪🇬</h2><p class="craft">Khayamiya-Applikation · Kairo · Arabisch/Englisch</p></div>
+      <a class="live" href="https://clappedbytxger.github.io/GitHubTimoRobin/tentmakers-cairo/" target="_blank" rel="noopener">Website ↗</a>
+    </div>
+    <div class="channels">
+      <span class="chip warn"><span class="k">Kontakt</span> kein Direktkontakt gefunden</span>
+      <a class="chip" href="https://www.facebook.com/search/top?q=tentmakers%20of%20cairo" target="_blank" rel="noopener"><span class="k">FB</span> „Tentmakers of Cairo" (Community)</a>
+      <span class="chip"><span class="k">Vor Ort</span> Sharia al-Khayamiya</span>
+    </div>
+    <div class="mail">
+      <div class="mrow"><span class="lbl">Betreff · Englisch</span><button class="copy" data-copy="I built a website for your khayamiya art">Kopieren</button></div>
+      <p class="subj">I built a website for your khayamiya art</p>
+      <div class="mrow"><span class="lbl">Nachricht · Englisch</span><button class="copy" data-tgt="b14">Text kopieren</button></div>
+      <div class="body" id="b14">Hello,
+
+My name is Robin and I design websites for craftspeople.
+
+I greatly admire the khayamiya art of Cairo, and it saddened me that such a rare craft is barely visible online — even though textile artists and collectors around the world search for it.
+
+So I prepared a website proposal for you, ready to view — to show your work and receive orders and international shipping enquiries:
+
+👉 https://clappedbytxger.github.io/GitHubTimoRobin/tentmakers-cairo/
+
+It's just a concept — text, colours and photos can all change. If you like it, reply to this message; if it's not for you, feel free to ignore it, no obligation.
+
+With respect,
+Robin
+robinhumberg@gmx.de
+
+If you'd rather not receive further messages, just let me know.</div>
+      <details>
+        <summary>النسخة العربية (Arabisch)</summary>
+        <p class="subj" dir="rtl">صنعتُ لكم موقعًا إلكترونيًا لفنّ الخيامية</p>
+        <div class="mrow"><span class="lbl">Nachricht · Arabisch</span><button class="copy" data-tgt="b14a">Text kopieren</button></div>
+        <div class="body" id="b14a" dir="rtl">السلام عليكم،
+
+اسمي Robin، وأصمّم مواقع إلكترونية للحرفيين.
+
+أُعجبتُ كثيرًا بفنّ الخيامية في القاهرة، وأحزنني أن هذا الفنّ النادر لا يكاد يظهر على الإنترنت، رغم أن هواة النسيج والمقتنين حول العالم يبحثون عنه.
+
+لذلك أعددتُ لكم اقتراح موقع إلكتروني جاهزًا للاطلاع:
+
+👉 https://clappedbytxger.github.io/GitHubTimoRobin/tentmakers-cairo/
+
+إنه مجرد تصوّر — النصوص والألوان والصور كلها قابلة للتغيير. إن أعجبكم، ردّوا على هذه الرسالة؛ وإن لم يناسبكم، تجاهلوه بلا أي التزام.
+
+مع خالص التقدير،
+Robin
+robinhumberg@gmx.de</div>
+      </details>
+    </div>
+  </article>
+
+  <!-- 15 -->
+  <article class="firm" id="f15">
+    <div class="fh"><span class="num">15</span>
+      <div class="fh-main"><h2>Pottery Training Centre 🇳🇵</h2><p class="craft">Töpferei · Pottery Square, Bhaktapur · Nepali/Englisch</p></div>
+      <a class="live" href="https://clappedbytxger.github.io/GitHubTimoRobin/bhaktapur-pottery/" target="_blank" rel="noopener">Website ↗</a>
+    </div>
+    <div class="channels">
+      <a class="chip" href="https://www.instagram.com/potterytrainingcenter/" target="_blank" rel="noopener"><span class="k">IG</span> @potterytrainingcenter</a>
+      <a class="chip" href="https://www.facebook.com/potterytrainingcentre/" target="_blank" rel="noopener"><span class="k">FB</span> potterytrainingcentre</a>
+      <a class="chip" href="tel:+9779849172187"><span class="k">Tel</span> +977 984-9172187</a>
+    </div>
+    <div class="mail">
+      <div class="mrow"><span class="lbl">Betreff · Englisch</span><button class="copy" data-copy="I built a website for your Bhaktapur pottery">Kopieren</button></div>
+      <p class="subj">I built a website for your Bhaktapur pottery</p>
+      <div class="mrow"><span class="lbl">Nachricht · Englisch</span><button class="copy" data-tgt="b15">Text kopieren</button></div>
+      <div class="body" id="b15">Hello,
+
+My name is Robin and I build websites for artisans.
+
+I love the pottery of Bhaktapur's Pottery Square. It felt a shame that visitors searching for a “pottery class in Bhaktapur” online can't find your workshop directly — only tour agencies.
+
+So I built you a website proposal, ready to view — to show your pots and let travellers book the wheel experience with you:
+
+👉 https://clappedbytxger.github.io/GitHubTimoRobin/bhaktapur-pottery/
+
+It's just a concept — text, colours and photos can all change. If you like it, simply reply; if not, feel free to ignore this, no obligation.
+
+Best regards,
+Robin
+robinhumberg@gmx.de
+
+If you'd rather not receive further messages, just let me know.</div>
+    </div>
+  </article>
+
+  <!-- 16 -->
+  <article class="firm" id="f16">
+    <div class="fh"><span class="num">16</span>
+      <div class="fh-main"><h2>Rishtan Ceramics 🇺🇿</h2><p class="craft">Blaue Keramik · Rishton, Ferghana · Englisch</p></div>
+      <a class="live" href="https://clappedbytxger.github.io/GitHubTimoRobin/rishtan-ceramics/" target="_blank" rel="noopener">Website ↗</a>
+    </div>
+    <div class="channels">
+      <a class="chip" href="https://www.instagram.com/ceramic.of.rishtan/" target="_blank" rel="noopener"><span class="k">IG</span> @ceramic.of.rishtan</a>
+      <a class="chip" href="https://www.facebook.com/usmanovsworkshop/" target="_blank" rel="noopener"><span class="k">FB</span> usmanovsworkshop</a>
+      <span class="chip warn"><span class="k">Hinweis</span> Usmanov ist schon etabliert — ggf. kleineren Meister wählen</span>
+    </div>
+    <div class="mail">
+      <div class="mrow"><span class="lbl">Betreff · Englisch</span><button class="copy" data-copy="I built a website for your Rishtan ceramics">Kopieren</button></div>
+      <p class="subj">I built a website for your Rishtan ceramics</p>
+      <div class="mrow"><span class="lbl">Nachricht · Englisch</span><button class="copy" data-tgt="b16">Text kopieren</button></div>
+      <div class="body" id="b16">Hello,
+
+My name is Robin and I build websites for artisans.
+
+I greatly admire Rishtan blue ceramics and the ishkor glaze. It felt a shame that collectors and Silk Road travellers can't easily find your workshop or order directly online.
+
+So I built you a website proposal, ready to view — to show your pieces and receive orders and international shipping enquiries:
+
+👉 https://clappedbytxger.github.io/GitHubTimoRobin/rishtan-ceramics/
+
+It's just a concept — text, colours and photos can all change. If you like it, simply reply; if not, feel free to ignore this, no obligation.
+
+Best regards,
+Robin
+robinhumberg@gmx.de
+
+If you'd rather not receive further messages, just let me know.</div>
+    </div>
+  </article>
+
+  <!-- 17 -->
+  <article class="firm" id="f17">
+    <div class="fh"><span class="num">17</span>
+      <div class="fh-main"><h2>Lang Dulay T'nalak 🇵🇭</h2><p class="craft">T'nalak-Weberei · Lake Sebu · Englisch</p></div>
+      <a class="live" href="https://clappedbytxger.github.io/GitHubTimoRobin/lang-dulay-tnalak/" target="_blank" rel="noopener">Website ↗</a>
+    </div>
+    <div class="channels">
+      <a class="chip" href="tel:+639066931745"><span class="k">Tel Marilyn Dulay</span> +63 906 693 1745</a>
+      <a class="chip" href="tel:+639264152925"><span class="k">Tel</span> +63 926 415 2925</a>
+    </div>
+    <div class="mail">
+      <div class="mrow"><span class="lbl">Betreff · Englisch</span><button class="copy" data-copy="A website for the Lang Dulay T'nalak weavers">Kopieren</button></div>
+      <p class="subj">A website for the Lang Dulay T'nalak weavers</p>
+      <div class="mrow"><span class="lbl">Nachricht · Englisch</span><button class="copy" data-tgt="b17">Text kopieren</button></div>
+      <div class="body" id="b17">Hello,
+
+My name is Robin and I build websites for artisans.
+
+I have deep respect for T'nalak and the legacy of Lang Dulay. It felt a shame that collectors, museums and designers who search for authentic T'nalak online can't easily find the weaving center or reach you directly.
+
+So I built a website proposal, ready to view — made to honour the dreamweavers' story and to receive orders and enquiries:
+
+👉 https://clappedbytxger.github.io/GitHubTimoRobin/lang-dulay-tnalak/
+
+It's only a concept — every word, colour and photo can change, and I'd want the weavers' guidance on how the tradition is shown. If you like it, simply reply; if not, please feel free to ignore this, no obligation.
+
+With respect,
+Robin
+robinhumberg@gmx.de
+
+If you'd rather not receive further messages, just let me know.</div>
+    </div>
+  </article>
+
+  <!-- 18 -->
+  <article class="firm" id="f18">
+    <div class="fh"><span class="num">18</span>
+      <div class="fh-main"><h2>Filigrana de Mompox 🇨🇴</h2><p class="craft">Silber-Filigran · Mompox · Spanisch</p></div>
+      <a class="live" href="https://clappedbytxger.github.io/GitHubTimoRobin/trespalacios-filigree/" target="_blank" rel="noopener">Website ↗</a>
+    </div>
+    <div class="channels">
+      <span class="chip warn"><span class="k">TresPalacios</span> nicht direkt online → Casa Museo Trespalacios (vor Ort)</span>
+      <a class="chip" href="https://www.instagram.com/joyeria_lyl_filigrana_mompox/" target="_blank" rel="noopener"><span class="k">IG (Alt.)</span> @joyeria_lyl_filigrana_mompox</a>
+      <a class="chip" href="mailto:joyerialyl@gmail.com"><span class="k">E-Mail (Alt.)</span> joyerialyl@gmail.com</a>
+    </div>
+    <div class="mail">
+      <div class="mrow"><span class="lbl">Betreff</span><button class="copy" data-copy="Les hice un sitio web para su filigrana">Kopieren</button></div>
+      <p class="subj">Les hice un sitio web para su filigrana</p>
+      <div class="mrow"><span class="lbl">Nachricht · Spanisch</span><button class="copy" data-tgt="b18">Text kopieren</button></div>
+      <div class="body" id="b18">Hola,
+
+Me llamo Robin y hago sitios web para artesanos.
+
+Admiro mucho la filigrana momposina. Me pareció una lástima que los compradores y amantes de la joyería que buscan filigrana auténtica en internet no puedan encontrar su taller ni encargar directamente.
+
+Por eso les preparé una propuesta de sitio web, ya lista para ver — pensada para mostrar sus joyas y recibir encargos y envíos:
+
+👉 https://clappedbytxger.github.io/GitHubTimoRobin/trespalacios-filigree/
+
+Es solo un concepto: textos, colores y fotos se pueden cambiar. Si les gusta, respondan y seguimos; si no, ignoren este mensaje sin ningún compromiso.
+
+Un saludo,
+Robin
+robinhumberg@gmx.de
+
+Si prefieren no recibir más mensajes, solo díganlo.</div>
+    </div>
+  </article>
+
+  <!-- 19 -->
+  <article class="firm" id="f19">
+    <div class="fh"><span class="num">19</span>
+      <div class="fh-main"><h2>Avanos Çömlek 🇹🇷</h2><p class="craft">Keramik · Avanos, Kappadokien · Türkisch</p></div>
+      <a class="live" href="https://clappedbytxger.github.io/GitHubTimoRobin/avanos-pottery/" target="_blank" rel="noopener">Website ↗</a>
+    </div>
+    <div class="channels">
+      <span class="chip warn"><span class="k">Hinweis</span> Die bekannten (Chez Galip, @avanospotteryworkshop) haben schon Websites</span>
+      <span class="chip"><span class="k">Tipp</span> kleinere Werkstatt vor Ort / per IG-Suche „Avanos çömlek"</span>
+    </div>
+    <div class="mail">
+      <div class="mrow"><span class="lbl">Betreff</span><button class="copy" data-copy="Atölyeniz için bir web sitesi hazırladım">Kopieren</button></div>
+      <p class="subj">Atölyeniz için bir web sitesi hazırladım</p>
+      <div class="mrow"><span class="lbl">Nachricht · Türkisch</span><button class="copy" data-tgt="b19">Text kopieren</button></div>
+      <div class="body" id="b19">Merhaba,
+
+Adım Robin, ben zanaatkârlar için web siteleri yapıyorum.
+
+Avanos çömlekçiliğine hayranım. Kapadokya'ya gelen turistler çömlek deneyimini internetten önceden ararken, çoğu zaman sizin atölyenizi değil, aracı tur şirketlerini buluyor — bu bana yazık geldi.
+
+Bu yüzden sizin için hazır bir web sitesi teklifi hazırladım:
+
+👉 https://clappedbytxger.github.io/GitHubTimoRobin/avanos-pottery/
+
+Bu sadece bir taslak — metinler, renkler ve fotoğraflar değiştirilebilir. Beğenirseniz cevap verin; olmazsa görmezden gelin, hiçbir yükümlülük yok.
+
+Saygılarımla,
+Robin
+robinhumberg@gmx.de
+
+Daha fazla mesaj istemiyorsanız, söylemeniz yeterli.</div>
+    </div>
+  </article>
+
+  <!-- 20 -->
+  <article class="firm" id="f20">
+    <div class="fh"><span class="num">20</span>
+      <div class="fh-main"><h2>Mashiko-yaki 🇯🇵</h2><p class="craft">Keramik (Mingei) · Mashiko, Tochigi · Japanisch</p></div>
+      <a class="live" href="https://clappedbytxger.github.io/GitHubTimoRobin/mashiko-pottery/" target="_blank" rel="noopener">Website ↗</a>
+    </div>
+    <div class="channels">
+      <a class="chip" href="https://www.instagram.com/workshop_mashiko/" target="_blank" rel="noopener"><span class="k">IG</span> @workshop_mashiko (DM)</a>
+      <span class="chip warn"><span class="k">Hinweis</span> konkreten kleinen Familien-Ofen erst festlegen</span>
+    </div>
+    <div class="mail">
+      <div class="mrow"><span class="lbl">Betreff · Japanisch</span><button class="copy" data-copy="益子焼の窯元さんへ — ウェブサイトを作ってみました">Kopieren</button></div>
+      <p class="subj">益子焼の窯元さんへ — ウェブサイトを作ってみました</p>
+      <div class="mrow"><span class="lbl">Nachricht · Japanisch</span><button class="copy" data-tgt="b20">Text kopieren</button></div>
+      <div class="body" id="b20">こんにちは。
+
+Robin と申します。職人さんのためのウェブサイトを制作しています。
+
+益子焼が大好きで、海外の民藝コレクターやお客様が「Mashiko pottery」と検索しても、大きな窯元ばかりが出てきて、小さな家族の窯元にたどり着けないのを残念に思っていました。
+
+そこで、勝手ながらウェブサイトの試案を作ってみました。ご覧いただけます：
+
+👉 https://clappedbytxger.github.io/GitHubTimoRobin/mashiko-pottery/
+
+あくまで試案で、文章・色・写真はすべて変更できます。気に入っていただけましたらご返信を、そうでなければ無視していただいて構いません。もちろん義務はございません。
+
+どうぞよろしくお願いいたします。
+Robin
+robinhumberg@gmx.de</div>
+    </div>
+  </article>
+
+  <footer>Outreach-Mappe · 20 Firmen · Recherchestand Juli 2026 · Kontakte vor dem Senden bestätigen.</footer>
+</main>
+
+<script>
+function tt(){var r=document.documentElement;var c=r.getAttribute('data-theme');
+  var n=c==='dark'?'light':(c==='light'?'dark':(window.matchMedia('(prefers-color-scheme: dark)').matches?'light':'dark'));
+  r.setAttribute('data-theme',n);}
+document.addEventListener('click',function(e){
+  var b=e.target.closest('.copy');if(!b)return;
+  var txt=b.getAttribute('data-copy');
+  if(!txt){var t=b.getAttribute('data-tgt');if(t){var el=document.getElementById(t);if(el)txt=el.innerText;}}
+  if(!txt)return;
+  function done(){var o=b.textContent;b.textContent='✓ Kopiert';b.classList.add('done');setTimeout(function(){b.textContent=o;b.classList.remove('done');},1400);}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(done,function(){fb(txt,done);});}
+  else{fb(txt,done);}
+});
+function fb(txt,cb){try{var ta=document.createElement('textarea');ta.value=txt;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);cb();}catch(e){}}
+</script>
+</body>
+</html>
